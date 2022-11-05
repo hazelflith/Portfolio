@@ -29,7 +29,7 @@ a {
   padding-left: 140px;
   padding-right: 140px;
   position: absolute;
-  top: 12px;
+  top: 1vh;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.7em;
@@ -39,7 +39,7 @@ a {
   padding-left: 140px;
   padding-right: 140px;
   position: absolute;
-  bottom: 1%;
+  bottom: 1.5vh;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.7em;
@@ -48,7 +48,7 @@ a {
   position: relative;
   height: 93vh;
   max-width: calc(100vmin * 21 / 9);
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   padding-top: 50px;
 }
@@ -102,8 +102,8 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0%;
-  left: 3%;
+  top: 0;
+  left: 5vw;
   opacity: 0;
 }
 .fe-background-after{
@@ -115,8 +115,8 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0%;
-  right: -25%;
+  top: 0;
+  right: -27vw;
   opacity: 0;
 }
 .right-side{
@@ -125,8 +125,8 @@ a {
 }
 .uiux-bigpicture{
   position: absolute;
-  top: 8%;
-  left: 20%;
+  top: 8vh;
+  left: 12vw;
   transform: skewX(45deg);
   margin-left: -76px;
   background-image: url(/images/uiux-bigpicture.png);
@@ -138,8 +138,8 @@ a {
 }
 .uiux-bigpicture-colored{
   position: absolute;
-  top: 8%;
-  left: 20%;
+  top: 8vh;
+  left: 12vw;
   transform: skewX(45deg);
   margin-left: -76px;
   background-image: url(/images/uiux-bigpicture-colored.png);
@@ -160,8 +160,8 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0%;
-  left: 20%;
+  top: 0;
+  left: 12vw;
   transform: skewX(45deg);
   margin-left: -76px;
   cursor: pointer;
@@ -169,16 +169,18 @@ a {
 .ui-detail{
   transform: skewX(45deg);
   position: absolute;
-  top: 65%;
-  left: 40%;
+  top: 60vh;
+  left: 22vw;
+  opacity: 0;
 }
 .ui-icons{
   opacity: 0;
 }
 .fe-detail{
   position: absolute;
-  top: 60%;
-  right: 10%;
+  top: 60vh;
+  right: 6vw;
+  opacity: 0;
 }
 .fe-icons{
  opacity: 0;
@@ -186,8 +188,8 @@ a {
 .ui-btn{
   transform: skewX(45deg);
   position: absolute;
-  top: 55%;
-  left: 75%;
+  top: 53vh;
+  left: 40vw;
   white-space: nowrap;
   background: linear-gradient(90deg, #FFAED9 -39.29%, #6AB2FF 136.16%);
   border-radius: 15px;
@@ -213,8 +215,8 @@ a {
 
 .fe-btn{
   position: absolute;
-  top: 49%;
-  left: 50%;
+  top: 49vh;
+  left: 24vw;
   white-space: nowrap;
   background: linear-gradient(90deg, #FFAED9 -39.29%, #6AB2FF 136.16%);
   border-radius: 15px;
@@ -239,8 +241,8 @@ a {
 }
 .fe-bigpicture{
   position: relative;
-  top: 20%;
-  left: 30%;
+  top: 18vh;
+  left: 13vw;
   z-index: 2;
   overflow: hidden;
   background-image: url(/images/frontend-bigpicture.png);
@@ -253,8 +255,8 @@ a {
 }
 .fe-bigpicture-colored{
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 18vh;
+  left: 13vw;
   z-index: 1;
   overflow: hidden;
   background-image: url(/images/frontend-bigpicture-colored.png);
@@ -275,8 +277,8 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -2%;
-  left: -13%;
+  top: -5vh;
+  left: -6vw;
   
 }
 .fe-background2{
@@ -288,15 +290,15 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: -2%;
-  left: -13%;
+  top: -5vh;
+  left: -6vw;
   
 }
 .slider{
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 50px;
+  top: 5vh;
 }
 .elipse{
   width: 8%;
@@ -307,12 +309,12 @@ a {
   background-size: contain;
   z-index: 5;
   position: relative;
-  top: 38%;
+  top: 34.5vh;
 
 }
 .line{  
   position: absolute;
-  left: 49.8%;
+  left: 49.8vw;
   top: 0;
   width: 3px;
   height: 89%;
@@ -490,30 +492,44 @@ a {
   background-size: contain;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
 @media screen and (max-width: 1024px){
   .fe-background{
-    top: 17%;
+    top: 14vh;
+    left: -9vw;
+  }
+  .fe-background2{
+    top: 14vh;
+    left: -9vw;
   }
   .fe-bigpicture{
-    top: 30%;
+    top: 30vh;
   }
   .uiux-background{
-    top: 17%;
-    left: 55%;
+    top: 14vh;
+    left: 25vw;
   }
   .uiux-bigpicture{
-    top: 20%;
-    left: 35%;
+    top: 16vh;
+    left: 15vw;
+  }
+  .ui-btn{
+    font-size: medium;
+    line-height: 22px;
+    padding: 10px 15px;
+    top: 48vh;
+  }
+  .fe-btn{
+    font-size: medium;
+    line-height: 22px;
+    padding: 10px 15px;
+    top: 40vh;
+    left: 20vw;
+  }
+  .ui-detail{
+    
+  }
+  .fe-detail{
+    
   }
   
 }

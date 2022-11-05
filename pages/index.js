@@ -3,15 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
-
-//LEFT ANIMATION
-
+  
 export default function Home() {
-  const comp = useRef(); // create a ref for the root level element (we'll use it later)
-  var leftClick = false;
   useEffect(() => {
-    
-    
     // -- ANIMATION CODE HERE --
     // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
     // let ctx = gsap.context(() => {
@@ -93,6 +87,7 @@ export default function Home() {
         ease: "expo"
       });
       gsap.to(".ui-detail", {
+        opacity: 1,
         x : "35vw",
         duration: 1.5,
         ease: "expo"
@@ -234,12 +229,13 @@ export default function Home() {
         ease: "expo"
       });
       gsap.to(".fe-detail", {
-        x : "-38vw",
+        opacity: 1,
+        x : "-41vw",
         duration: 1.5,
         ease: "expo"
       });
       gsap.to(".fe-btn", {
-        x : "-309%",
+        x : "-37vw",
         opacity: 1,
         duration: 1.5,
         ease: "expo"
