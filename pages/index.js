@@ -3,8 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { Analytics } from '@vercel/analytics/react';
   
-export default function Home() {
+export default function Home({ Component, pageProps }) {
   useEffect(() => {
     // -- ANIMATION CODE HERE --
     // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
@@ -311,7 +312,10 @@ export default function Home() {
     rightTL.revert();
   }
 return (
+  
     <div className={styles.container} id="main-border">
+      <Component {...pageProps} />
+      <Analytics />
       <Head>
         <title>Home | Haris Putratama</title>
         <meta name="description" content="Haris's Personal Portfolios" />
