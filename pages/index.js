@@ -312,10 +312,10 @@ export default function Home({ Component, pageProps }) {
     rightTL.revert();
   }
 return (
-  
+  <>
+    <Analytics />
     <div className={styles.container} id="main-border">
-      <Component {...pageProps} />
-      <Analytics />
+      
       <Head>
         <title>Home | Haris Putratama</title>
         <meta name="description" content="Haris's Personal Portfolios" />
@@ -410,5 +410,6 @@ return (
         </div>
       </div>
     </div>
+  </>
   )
 }
