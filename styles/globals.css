@@ -1,3 +1,4 @@
+
 html,
 body {
   padding: 0;
@@ -83,6 +84,7 @@ a {
   width: 49.8vw;
   background-color: white;
   z-index: -1;
+  opacity: 0;
 }
 .right-overlay2{
   position: absolute;
@@ -92,9 +94,10 @@ a {
   width: 49.8vw;
   background: linear-gradient(180deg, #FFAED9 -39.29%, #6AB2FF 136.16%);
   z-index: -2;
+  opacity: 0;
 }
 .uiux-background-after{
-  background-image: url(/images/uiux-bg.png);
+  background-image: url(/images/uiux-bg-min.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
@@ -107,7 +110,7 @@ a {
   opacity: 0;
 }
 .fe-background-after{
-  background-image: url(/images/frontend-bg.png);
+  background-image: url(/images/frontend-bg-min.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
@@ -120,6 +123,7 @@ a {
   opacity: 0;
 }
 .right-side{
+  z-index: 0;
   position: relative;
   height: 93vh;
 }
@@ -165,6 +169,19 @@ a {
   transform: skewX(45deg);
   margin-left: -76px;
   cursor: pointer;
+}
+.radiant-purple{
+  background: radial-gradient(50% 50% at 50% 50%, #DBB0E3 0%, rgba(218, 176, 227, 0) 80.73%);
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -4vh;
+  left: 3vw;
+  transform: skewX(45deg);
+  margin-left: -76px;
+  cursor: pointer;
+  opacity: 0;
 }
 .ui-detail{
   transform: skewX(45deg);
@@ -239,11 +256,22 @@ a {
   color: #FFAED9 !important;
   border-color: #FFAED9 !important;
 }
+.radiant-blue{
+  background: radial-gradient(50% 50% at 50% 50%, #8FB2F6 0%, rgba(145, 178, 246, 0) 80.73%);
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5vh;
+  left: 4vw;
+  cursor: pointer;
+  opacity: 0;
+}
 .fe-bigpicture{
   position: relative;
   top: 18vh;
   left: 13vw;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
   background-image: url(/images/frontend-bigpicture.png);
   background-repeat: no-repeat;
@@ -257,7 +285,7 @@ a {
   position: absolute;
   top: 18vh;
   left: 13vw;
-  z-index: 1;
+  z-index: 2;
   overflow: hidden;
   background-image: url(/images/frontend-bigpicture-colored.png);
   background-repeat: no-repeat;
@@ -265,8 +293,9 @@ a {
   background-size: contain;
   height: 62%;
   width: 62%;
-  opacity: 0;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
 }
 .fe-background{
   background-image: url(/images/frontend-initbg.png);
@@ -314,7 +343,6 @@ a {
 }
 .line{  
   position: absolute;
-  left: 49.8vw;
   top: 0;
   width: 3px;
   height: 89%;
@@ -327,10 +355,10 @@ a {
 }
 
 .ui-mockup{
-  opacity: 10%;
+  opacity: 20%;
 }
 .fe-mockup{
-  opacity: 10%;
+  opacity: 20%;
 }
 .ui1{
   position: absolute;
@@ -491,7 +519,6 @@ a {
   background-position: left top;
   background-size: contain;
 }
-
 @media screen and (max-width: 1024px){
   .fe-background{
     top: 14vh;
@@ -525,11 +552,35 @@ a {
     top: 40vh;
     left: 20vw;
   }
-  .ui-detail{
-    
-  }
-  .fe-detail{
-    
-  }
-  
+}
+.uiux-container{
+  background: #ffdaee;
+  height: 100vh;
+}
+.transition-wrapper{
+  position: absolute;
+  width: 99.14vw;
+  height: 97vh;
+  overflow: hidden;
+}
+.wave-container{
+  position: absolute;
+  z-index: 10;
+  bottom: -1vh;
+}
+.wave1{
+  position: absolute;
+  bottom: -125vh;
+}
+.wave2{
+  position: absolute;
+  bottom: -130vh;
+}
+.wave3{
+  position: absolute;
+  bottom: -160vh;
+}
+.wave4{
+  position: absolute;
+  bottom: -240vh;
 }
