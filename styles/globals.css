@@ -43,7 +43,7 @@ a {
   bottom: 2.5vh;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: 0.7em;
+  letter-spacing: 0.5em;
 }
 .content{
   position: relative;
@@ -589,7 +589,7 @@ a {
   position: absolute;
   opacity: 0;
   z-index: 10;
-  bottom: -40vh;
+  bottom: -220vh;
 }
 .wave1{
   position: absolute;
@@ -606,4 +606,18 @@ a {
 .wave4{
   position: absolute;
   bottom: -240vh;
+}
+
+.shape-overlays {
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+  z-index: 10;
+}
+
+.shape-overlays.is-opened {
+	pointer-events: auto;
 }
