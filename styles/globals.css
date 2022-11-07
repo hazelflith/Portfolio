@@ -40,7 +40,7 @@ a {
   padding-left: 140px;
   padding-right: 140px;
   position: absolute;
-  bottom: 1.5vh;
+  bottom: 2.5vh;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.7em;
@@ -94,6 +94,26 @@ a {
   width: 49.8vw;
   background: linear-gradient(180deg, #FFAED9 -39.29%, #6AB2FF 136.16%);
   z-index: -2;
+  opacity: 0;
+}
+.right-close-overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 93vh;
+  width: 40vw;
+  background-color: white;
+  z-index: -1;
+  opacity: 0;
+}
+.left-close-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 93vh;
+  width: 40vw;
+  background-color: white;
+  z-index: -1;
   opacity: 0;
 }
 .uiux-background-after{
@@ -196,7 +216,7 @@ a {
 .fe-detail{
   position: absolute;
   top: 60vh;
-  right: 6vw;
+  right: 4vw;
   opacity: 0;
 }
 .fe-icons{
@@ -215,7 +235,7 @@ a {
   font-weight: 600;
   font-size: 24px;
   line-height: 44px;
-  padding: 10px 25px;
+  padding: 7px 20px;
   opacity: 0;
 }
 .ui-btn:hover{
@@ -242,7 +262,7 @@ a {
   font-weight: 600;
   font-size: 24px;
   line-height: 44px;
-  padding: 10px 25px;
+  padding: 7px 20px;
   opacity: 0;
 }
 .fe-btn:hover{
@@ -415,7 +435,7 @@ a {
 .ui5{
   position: absolute;
   top: -3%;
-  left: -20%;
+  left: -15%;
   height: 27%;
   width: 27%;
   transform: skewX(45deg);
@@ -559,14 +579,17 @@ a {
 }
 .transition-wrapper{
   position: absolute;
+  top: 0;
+  left: 0;
   width: 99.14vw;
   height: 97vh;
   overflow: hidden;
 }
 .wave-container{
   position: absolute;
+  opacity: 0;
   z-index: 10;
-  bottom: -1vh;
+  bottom: -40vh;
 }
 .wave1{
   position: absolute;

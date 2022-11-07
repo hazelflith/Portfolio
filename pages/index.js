@@ -182,6 +182,12 @@ export default function Home() {
         duration:1.5,
         ease: "expo"
       })
+      gsap.to(".left-close-overlay",{
+        x: "135.5%",
+        duration:1.5,
+        ease: "expo",
+        zIndex: 1
+      })
     });
       
   }
@@ -470,6 +476,12 @@ export default function Home() {
         duration:1.5,
         ease: "expo"
       })
+      gsap.to(".right-close-overlay",{
+        x: "-135.5%",
+        duration:1.5,
+        ease: "expo",
+        zIndex: 1
+      })
     });
       
   }
@@ -624,12 +636,9 @@ return (
               </div>
               <Link className="btn btn-primary ui-btn" href="uiux">View Details</Link>
               <div className="ui-detail">
-                  <h2><b>Tools:</b></h2>
+                  <h3><b>Tools:</b></h3>
                   <div className="ui-icons d-flex gx-3">
-                    <img className="me-2" src="/images/figma.png" alt=""/>
-                    <img className="me-2" src="/images/miro.png" alt=""/>
-                    <img className="me-2" src="/images/ps.png" alt=""/>
-                    <img className="me-2" src="/images/ai.png" alt=""/>
+                    <img className="me-2" width="100%" src="/images/tools.png" alt=""/>
                   </div>
                 
               </div>
@@ -653,11 +662,9 @@ return (
               </div>
               <Link className="btn btn-primary fe-btn" href="/fe">View Details</Link>
               <div className="fe-detail">
-                  <h2><b>Language:</b></h2>
+                  <h3><b>Language:</b></h3>
                   <div className="fe-icons d-flex gx-3">
-                    <img className="me-2" src="/images/vue.png" alt=""/>
-                    <img className="me-2" src="/images/react.png" alt=""/>
-                    <img className="me-2" src="/images/php.png" alt=""/>
+                    <img className="me-2" width="80%" src="/images/language.png" alt=""/>
                   </div>
               </div>
               <div class="radiant-blue"></div>
@@ -675,9 +682,15 @@ return (
           </div>
           <div className="left-overlay"></div>
           <div className="left-overlay2"></div>
+          <div className="left-close-overlay"
+          onClick = {leftAnimationStop}
+          ></div>
           <div className="uiux-background-after"></div>
           <div className="right-overlay"></div>
           <div className="right-overlay2"></div>
+          <div className="right-close-overlay"
+          onClick = {rightAnimationStop}
+          ></div>
           <div className="fe-background-after"></div>
         </div>
       {/* UIUX TRANSITION SVG */}
