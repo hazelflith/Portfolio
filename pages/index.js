@@ -8,9 +8,16 @@ import { useRouter } from 'next/router'
   
 export default function Home() {
   const router = useRouter();
+  let elmHamburger
+  let gNavItems
+  let elmOverlay
+  let overlay
   useEffect(() => {
     
-    
+    elmHamburger = document.querySelector('.ui-btn');
+    gNavItems = document.querySelectorAll('.global-menu__item');
+    elmOverlay = document.querySelector('.shape-overlays');
+    overlay = new ShapeOverlays(elmOverlay);
     // -- ANIMATION CODE HERE --
     // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
     // let ctx = gsap.context(() => {
@@ -30,7 +37,6 @@ export default function Home() {
   let rightTL = gsap.context(() =>{});
   let rightOverlay = gsap.context(() => {});
   let rightHV = gsap.context(() =>{});
-  let transition = gsap.context(() =>{});
   var rightClick = false;
 
   function leftHover(){
@@ -659,38 +665,15 @@ export default function Home() {
       }
       else {
         this.isAnimating = false;
+        router.push('/uiux');
       }
     }
   }
-  if (typeof window === 'undefined') {
-    const elmHamburger = document.querySelector('.ui-btn');
-    const gNavItems = document.querySelectorAll('.global-menu__item');
-    const elmOverlay = document.querySelector('.shape-overlays');
-    const overlay = new ShapeOverlays(elmOverlay);
-
-  }
   function startTransition() {
-
-      elmHamburger.addEventListener('click', () => {
-        if (overlay.isAnimating) {
-          return false;
-        }
-        overlay.toggle();
-        if (overlay.isOpened === true) {
-          elmHamburger.classList.add('is-opened-navi');
-          for (var i = 0; i < gNavItems.length; i++) {
-            gNavItems[i].classList.add('is-opened');
-          }
-        } else {
-          elmHamburger.classList.remove('is-opened-navi');
-          for (var i = 0; i < gNavItems.length; i++) {
-            gNavItems[i].classList.remove('is-opened');
-          }
-        }
-      });
-    // setTimeout(() => {
-    //   router.push('/uiux')
-    // }, "2600")
+    if (overlay.isAnimating) {
+      return false;
+    }
+    overlay.toggle();
   }
 return (
   <>
@@ -706,13 +689,14 @@ return (
         <stop offset="100%" stop-color="#ff3898"/>
       </linearGradient>
       <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%"   stop-color="#110046"/>
-        <stop offset="100%" stop-color="#32004a"/>
+      <stop stop-color="#FFFFC1"/>
+      <stop offset=".70" stop-color="#FFA9F1"/>
+      <stop offset="1" stop-color="#9FFFE6"/>
       </linearGradient>
     </defs>
     <path fill="url(#gradient1)" class="shape-overlays__path"></path>
     <path fill="url(#gradient2)" class="shape-overlays__path"></path>
-    <path fill="url(#gradient3)" class="shape-overlays__path"></path>
+    <path fill="#FFFFC1" class="shape-overlays__path"></path>
   </svg>
   <div className={styles.container} id="main-border">
     <Head>
@@ -815,7 +799,6 @@ return (
       {/* UIUX TRANSITION SVG */}
     </main>
   </div>
-	<script src="js/easings.js"></script>
   </>
   )
 }

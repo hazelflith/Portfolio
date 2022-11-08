@@ -16,31 +16,8 @@ function MyApp({ Component, pageProps }) {
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"/>
-            {/* <AnimatePresence>
-                <motion.div
-                    key={router.route}
-                    initial="initialState"
-                    animate="animateState"
-                    exit="exitState"
-                    transition={{
-                        duration: 0.75,
-                    }}
-                    variants={{
-                        initialState: {
-                            opacity: 0,
-                        },
-                        animateState: {
-                            opacity: 1,
-                        },
-                        exitState: {
-
-                        },
-                    }}  
-                    // className="wave-container"
-                > */}
-                    <Component {...pageProps} />  
-                {/* </motion.div>
-            </AnimatePresence> */}
+            <Script src="js/easings.js"></Script>
+            <Component {...pageProps} />  
         </>
     )
 }

@@ -573,10 +573,6 @@ a {
     left: 20vw;
   }
 }
-.uiux-container{
-  background: #ffdaee;
-  height: 100vh;
-}
 .transition-wrapper{
   position: absolute;
   top: 0;
@@ -585,29 +581,6 @@ a {
   height: 97vh;
   overflow: hidden;
 }
-.wave-container{
-  position: absolute;
-  opacity: 0;
-  z-index: 10;
-  bottom: -220vh;
-}
-.wave1{
-  position: absolute;
-  bottom: -125vh;
-}
-.wave2{
-  position: absolute;
-  bottom: -130vh;
-}
-.wave3{
-  position: absolute;
-  bottom: -160vh;
-}
-.wave4{
-  position: absolute;
-  bottom: -240vh;
-}
-
 .shape-overlays {
 	width: 100vw;
 	height: 100vh;
@@ -617,7 +590,13 @@ a {
 	left: 0;
   z-index: 10;
 }
-
 .shape-overlays.is-opened {
 	pointer-events: auto;
+}
+.uiux-container{
+  height: 100vh;
+  background: #FFFFC1;
+}
+.intro-transition{
+  opacity: 0;
 }
