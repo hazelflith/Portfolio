@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
-export default function uiux() {
+export default function Uiux() {
   useEffect(() => {
     
     // -- ANIMATION CODE HERE --
