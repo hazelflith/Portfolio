@@ -13,6 +13,8 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"></link>
+            <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet"></link>
+            <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet"></link>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"/>

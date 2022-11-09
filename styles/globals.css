@@ -588,15 +588,171 @@ a {
 	position: fixed;
 	top: 0;
 	left: 0;
-  z-index: 10;
+  z-index: 1001;
 }
 .shape-overlays.is-opened {
 	pointer-events: auto;
 }
 .uiux-container{
-  height: 100vh;
   background: #FFFFC1;
 }
 .intro-transition{
   opacity: 0;
+  position: relative;
+}
+.intro-transition2{
+  opacity: 0;
+}
+.intro-transition3{
+  opacity: 0;
+}
+.intro-transition4{
+  opacity: 0;
+}
+.intro-transition5{
+  opacity: 0;
+}
+.navbar-container{
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+  position: relative;
+}
+.navbar{
+  backdrop-filter: blur(5px);
+}
+.nav-link{
+  color: black;
+}
+.blur1{
+  width: 100%;
+  backdrop-filter: blur(4.5px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur2{
+  width: 100%;
+  backdrop-filter: blur(4px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur3{
+  width: 100%;
+  backdrop-filter: blur(3.5px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur4{
+  width: 100%;
+  backdrop-filter: blur(3px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur5{
+  width: 100%;
+  backdrop-filter: blur(2.5px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur6{
+  width: 100%;
+  backdrop-filter: blur(2px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur7{
+  width: 100%;
+  backdrop-filter: blur(1.5px) !important;
+  padding-bottom: 0.15rem;
+}
+.blur8{
+  width: 100%;
+  backdrop-filter: blur(1px) !important;
+  padding-bottom: 0.15rem;
+}
+.ui-brand{
+  font-size: 20px;
+  font-weight: 400;
+}
+.btn-home{
+  cursor: pointer;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.content-ui{
+  padding-top: 100px;
+}
+.navbar-line{
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+.uiux-hero{
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  font-size: 5.75em;
+  line-height: 1em;
+  transform: scale(1, 1.25);
+  margin-bottom: 160px;
+}
+.uiux-hero2{
+  max-width: 700px;
+  margin-bottom: 5em;
+}
+.uiux-hero3{
+  margin-top: 0px;
+  max-width: 520px;
+  padding-bottom: 0px;
+}
+.project-wrap{
+  margin-top: -200px;
+}
+.project-text{
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  font-size: 5.75em;
+  word-wrap: break-word;
+  padding-top: 300px;
+  max-width: 135px;
+  line-height: 100%;
+  border-right: 10px solid #212529;
+}
+.projects{
+  padding-top: 300px;
+  padding-left: 48px;
+}
+.project{
+  position: relative;
+  margin-bottom: 10em;
+}
+.project-img{
+  aspect-ratio: 16 / 9;
+  width: 900px;
+  height: auto;
+  background-color:#212529;
+}
+.project-title{
+  position: absolute;
+  bottom: 10%;
+  right: -20%;
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  font-size: 4.75em;
+  color: white;
+}
+.indonesia-wrapper{
+  position: relative;
+}
+.indonesia1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+}
+.indonesia2{
+  position: absolute;
+  top: 0;
+  left: 0;
 }

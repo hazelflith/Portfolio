@@ -18,16 +18,14 @@ export default function Home() {
     gNavItems = document.querySelectorAll('.global-menu__item');
     elmOverlay = document.querySelector('.shape-overlays');
     overlay = new ShapeOverlays(elmOverlay);
-    // -- ANIMATION CODE HERE --
-    // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
-    // let ctx = gsap.context(() => {
-      
-    //   // all our animations can use selector text like ".box" 
-    //   // and it's properly scoped to our component
-      
-    // }, comp); // <- IMPORTANT! Scopes selector text
-    
-    // return () => ctx.revert();
+    let ctx = gsap.context(() => {
+      gsap.to(".intro-transition", {
+        opacity: 1,
+        duration: 2,
+        ease: "expo",
+      })
+    });
+    return () => ctx.revert();
     
   }, []); // <- empty dependency Array so it doesn't re-run on every render!
 
@@ -698,106 +696,108 @@ return (
     <path fill="url(#gradient2)" class="shape-overlays__path"></path>
     <path fill="#FFFFC1" class="shape-overlays__path"></path>
   </svg>
-  <div className={styles.container} id="main-border">
-    <Head>
-      <title>Home | Haris Putratama</title>
-      <meta name="description" content="Haris's Personal Portfolios" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <div className='d-flex justify-content-center'>
-      <div className='main-border-top-text text-center'>
-        <h6>HARIS PUTRATAMA</h6>
-        <h6>PERSONAL PORTFOLIOS</h6>
-      </div>
-    </div>
-    <div className='d-flex justify-content-center'>
-      <div className='main-border-bottom-text text-center'>
-        <h6>© 2022</h6>
-      </div>
-    </div>
-    <main className={styles.main}>
-        <div className='content'>
-          <div className="slider d-flex justify-content-center">
-            <div className="line"></div>
-            <div className="elipse"></div>
-          </div>
-          <div className="row gx-0">
-            <div className='left-side col'>
-              <div className="ui-mockup">
-                <div className="ui1"></div>
-                <div className="ui2"></div>
-                <div className="ui3"></div>
-                <div className="ui4"></div>
-                <div className="ui5"></div>
-                <div className="ui6"></div>
-                <div className="ui7"></div>
-                <div className="ui8"></div>
-              </div>
-              <div className="btn btn-primary ui-btn" 
-                onClick={startTransition}
-              >
-                View Details
-              </div>
-              <div className="ui-detail">
-                  <h3><b>Tools:</b></h3>
-                  <div className="ui-icons d-flex gx-3">
-                    <img className="me-2" width="100%" src="/images/tools.png" alt=""/>
-                  </div>
-                
-              </div>
-              <div className="radiant-purple"></div>
-              <div className="uiux-bigpicture"></div>
-              <div className="uiux-bigpicture-colored"
-              onClick = {leftAnimationStop}></div>
-              <div className="uiux-background" 
-              onClick = {leftAnimation} 
-              onMouseEnter = {leftHover}
-              onMouseLeave = {leftHoverStop}
-              ></div>
-            </div>
-            <div className="right-side col">
-              <div className="fe-mockup">
-                <div className="fe1"></div>
-                <div className="fe2"></div>
-                <div className="fe3"></div>
-                <div className="fe4"></div>
-                <div className="fe5"></div>
-              </div>
-              <Link className="btn btn-primary fe-btn" href="/fe">View Details</Link>
-              <div className="fe-detail">
-                  <h3><b>Language:</b></h3>
-                  <div className="fe-icons d-flex gx-3">
-                    <img className="me-2" width="80%" src="/images/language.png" alt=""/>
-                  </div>
-              </div>
-              <div className="radiant-blue"></div>
-              <div className="fe-bigpicture"
-              onClick = {rightAnimation} 
-              onMouseEnter = {rightHover}
-              onMouseLeave = {rightHoverStop}
-              ></div>
-              <div className="fe-bigpicture-colored"
-              onClick = {rightAnimationStop} 
-              ></div>
-              <div className="fe-background"></div>
-              <div className="fe-background2"></div>
-            </div>
-          </div>
-          <div className="left-overlay"></div>
-          <div className="left-overlay2"></div>
-          <div className="left-close-overlay"
-          onClick = {leftAnimationStop}
-          ></div>
-          <div className="uiux-background-after"></div>
-          <div className="right-overlay"></div>
-          <div className="right-overlay2"></div>
-          <div className="right-close-overlay"
-          onClick = {rightAnimationStop}
-          ></div>
-          <div className="fe-background-after"></div>
+  <div class="intro-transition">
+    <div className={styles.container} id="main-border">
+      <Head>
+        <title>Home | Haris Putratama</title>
+        <meta name="description" content="Haris's Personal Portfolios" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className='d-flex justify-content-center'>
+        <div className='main-border-top-text text-center'>
+          <h6>HARIS PUTRATAMA</h6>
+          <h6>PERSONAL PORTFOLIOS</h6>
         </div>
-      {/* UIUX TRANSITION SVG */}
-    </main>
+      </div>
+      <div className='d-flex justify-content-center'>
+        <div className='main-border-bottom-text text-center'>
+          <h6>© 2022</h6>
+        </div>
+      </div>
+      <main className={styles.main}>
+          <div className='content'>
+            <div className="slider d-flex justify-content-center">
+              <div className="line"></div>
+              <div className="elipse"></div>
+            </div>
+            <div className="row gx-0">
+              <div className='left-side col'>
+                <div className="ui-mockup">
+                  <div className="ui1"></div>
+                  <div className="ui2"></div>
+                  <div className="ui3"></div>
+                  <div className="ui4"></div>
+                  <div className="ui5"></div>
+                  <div className="ui6"></div>
+                  <div className="ui7"></div>
+                  <div className="ui8"></div>
+                </div>
+                <div className="btn btn-primary ui-btn" 
+                  onClick={startTransition}
+                >
+                  View Details
+                </div>
+                <div className="ui-detail">
+                    <h3><b>Tools:</b></h3>
+                    <div className="ui-icons d-flex gx-3">
+                      <img className="me-2" width="100%" src="/images/tools.png" alt=""/>
+                    </div>
+                  
+                </div>
+                <div className="radiant-purple"></div>
+                <div className="uiux-bigpicture"></div>
+                <div className="uiux-bigpicture-colored"
+                onClick = {leftAnimationStop}></div>
+                <div className="uiux-background" 
+                onClick = {leftAnimation} 
+                onMouseEnter = {leftHover}
+                onMouseLeave = {leftHoverStop}
+                ></div>
+              </div>
+              <div className="right-side col">
+                <div className="fe-mockup">
+                  <div className="fe1"></div>
+                  <div className="fe2"></div>
+                  <div className="fe3"></div>
+                  <div className="fe4"></div>
+                  <div className="fe5"></div>
+                </div>
+                <Link className="btn btn-primary fe-btn" href="/fe">View Details</Link>
+                <div className="fe-detail">
+                    <h3><b>Language:</b></h3>
+                    <div className="fe-icons d-flex gx-3">
+                      <img className="me-2" width="80%" src="/images/language.png" alt=""/>
+                    </div>
+                </div>
+                <div className="radiant-blue"></div>
+                <div className="fe-bigpicture"
+                onClick = {rightAnimation} 
+                onMouseEnter = {rightHover}
+                onMouseLeave = {rightHoverStop}
+                ></div>
+                <div className="fe-bigpicture-colored"
+                onClick = {rightAnimationStop} 
+                ></div>
+                <div className="fe-background"></div>
+                <div className="fe-background2"></div>
+              </div>
+            </div>
+            <div className="left-overlay"></div>
+            <div className="left-overlay2"></div>
+            <div className="left-close-overlay"
+            onClick = {leftAnimationStop}
+            ></div>
+            <div className="uiux-background-after"></div>
+            <div className="right-overlay"></div>
+            <div className="right-overlay2"></div>
+            <div className="right-close-overlay"
+            onClick = {rightAnimationStop}
+            ></div>
+            <div className="fe-background-after"></div>
+          </div>
+        {/* UIUX TRANSITION SVG */}
+      </main>
+    </div>
   </div>
   </>
   )
