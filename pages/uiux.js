@@ -251,7 +251,7 @@ export default function Uiux() {
           <div class="intro-transition4">
             <div class="ms-auto uiux-hero3">
               <h6>Your site or application looks will reflect how your company deliver messages and your culture, By establishing a
-                modern designs and aesthetic measures your client will think about how your company will please them. That's why you need
+                modern designs and aesthetic measures your client will think about how your company will please them. That&apos;s why you need
                 a great designs. Having competencies on making mobile and web mockups, I can help you to achieve your imagination and 
                 making ease of your project Design phase. I like to design modern and out of the box concept with interactive interfaces. 
               </h6>
