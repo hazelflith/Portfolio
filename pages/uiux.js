@@ -11,7 +11,7 @@ export default function Uiux() {
   let elmOverlay
   let overlay
   useEffect(() => {
-    
+    document.body.style.backgroundColor = "#c9efde";
     elmHamburger = document.querySelector('.btn-home');
     gNavItems = document.querySelectorAll('.global-menu__item');
     elmOverlay = document.querySelector('.shape-overlays');
@@ -46,6 +46,12 @@ export default function Uiux() {
         opacity: 1,
         duration: 2.75,
         delay: 0.70,
+        ease: "expo",
+      })
+      gsap.to(".blob-bg", {
+        opacity: 1,
+        duration: 2.75,
+        delay: 1.5,
         ease: "expo",
       })
       
@@ -191,12 +197,80 @@ export default function Uiux() {
   </svg>
   <Head>
     <title>UIUX | Haris Putratama</title>
-    <meta name="description" content="Haris's Personal Portfolios" />
+    <meta name="description" content="Haris's UIUX Personal Portfolios" />
     <link rel="icon" href="/favicon.ico" />
   </Head>
     <div class="uiux-container">
+      <div class="blob-bg">
+        <div class="blob1">
+          <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+            <g transform="translate(128.8225326538086, -8.702774047851562)">
+              <defs>
+              <filter id="blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blurred" />
+              </filter>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color= "rgb(238, 205, 163)"></stop>
+                  <stop offset="100%" stop-color= "rgb(239, 98, 159)"></stop>
+                </linearGradient>
+              </defs>
+              <path fill="url(#gradient2)" filter="url(#blur)">
+                <animate attributeName='d'
+                dur="5000ms"
+                repeatCount="indefinite"
+                
+                values='M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;
+
+                M425.5,292Q381,334,351,370Q321,406,274.5,403.5Q228,401,171,404Q114,407,108.5,350Q103,293,100,249Q97,205,123,169.5Q149,134,183.5,79.5Q218,25,265.5,68Q313,111,384.5,114.5Q456,118,463,184Q470,250,425.5,292Z;
+                
+                M432.5,303Q416,356,364.5,371.5Q313,387,267.5,416Q222,445,157,438.5Q92,432,70.5,370.5Q49,309,56,252Q63,195,76.5,130Q90,65,156.5,64.5Q223,64,274,74.5Q325,85,383,106Q441,127,445,188.5Q449,250,432.5,303Z;
+                
+                M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;'></animate>
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="blob2">
+          <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+            <g transform="translate(128.8225326538086, -8.702774047851562)">
+              <path fill="url(#gradient3)" filter="url(#blur)">
+                <animate attributeName='d'
+                dur="5000ms"
+                repeatCount="indefinite"
+                
+                values='M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;
+
+                M425.5,292Q381,334,351,370Q321,406,274.5,403.5Q228,401,171,404Q114,407,108.5,350Q103,293,100,249Q97,205,123,169.5Q149,134,183.5,79.5Q218,25,265.5,68Q313,111,384.5,114.5Q456,118,463,184Q470,250,425.5,292Z;
+                
+                M432.5,303Q416,356,364.5,371.5Q313,387,267.5,416Q222,445,157,438.5Q92,432,70.5,370.5Q49,309,56,252Q63,195,76.5,130Q90,65,156.5,64.5Q223,64,274,74.5Q325,85,383,106Q441,127,445,188.5Q449,250,432.5,303Z;
+                
+                M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;'></animate>
+              </path>
+            </g>
+          </svg>
+        </div>
+        <div class="blob3">
+          <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+            <g transform="translate(128.8225326538086, -8.702774047851562)">
+              <path fill="url(#gradient1)" filter="url(#blur)">
+                <animate attributeName='d'
+                dur="5000ms"
+                repeatCount="indefinite"
+                
+                values='M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;
+
+                M425.5,292Q381,334,351,370Q321,406,274.5,403.5Q228,401,171,404Q114,407,108.5,350Q103,293,100,249Q97,205,123,169.5Q149,134,183.5,79.5Q218,25,265.5,68Q313,111,384.5,114.5Q456,118,463,184Q470,250,425.5,292Z;
+                
+                M432.5,303Q416,356,364.5,371.5Q313,387,267.5,416Q222,445,157,438.5Q92,432,70.5,370.5Q49,309,56,252Q63,195,76.5,130Q90,65,156.5,64.5Q223,64,274,74.5Q325,85,383,106Q441,127,445,188.5Q449,250,432.5,303Z;
+                
+                M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;'></animate>
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
     <div class="intro-transition sticky">
-      <nav class="navbar navbar-expand-lg pt-4 pb-2">
+      <nav class="navbar navbar-expand-lg pt-4 pb-1">
         <div class="navbar-container">
           <div class="d-flex justify-content-between">
           <div class="navbar-brand">
@@ -228,7 +302,6 @@ export default function Uiux() {
       
       </div>
       <div class="container">
-        <div class="vertical-line"></div>
         <div class="content-ui">
           <div class="intro-transition2">
             <div class="uiux-hero mt-5">
@@ -282,6 +355,7 @@ export default function Uiux() {
           </div>
         </div>
       </div>
+      
     </div>
     </>
   )

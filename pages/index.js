@@ -13,7 +13,7 @@ export default function Home() {
   let elmOverlay
   let overlay
   useEffect(() => {
-    
+    document.body.style.backgroundColor = "white";
     elmHamburger = document.querySelector('.ui-btn');
     gNavItems = document.querySelectorAll('.global-menu__item');
     elmOverlay = document.querySelector('.shape-overlays');
@@ -694,7 +694,7 @@ return (
     </defs>
     <path fill="url(#gradient1)" class="shape-overlays__path"></path>
     <path fill="url(#gradient2)" class="shape-overlays__path"></path>
-    <path fill="#FFFFC1" class="shape-overlays__path"></path>
+    <path fill="#c9efde" class="shape-overlays__path"></path>
   </svg>
   <div class="intro-transition">
     <div className={styles.container} id="main-border">
@@ -703,18 +703,18 @@ return (
         <meta name="description" content="Haris's Personal Portfolios" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='d-flex justify-content-center'>
-        <div className='main-border-top-text text-center'>
+      <main className={styles.main}>
+      <div className='d-flex justify-content-center main-border-top-text '>
+        <div className='text-center'>
           <h6>HARIS PUTRATAMA</h6>
           <h6>PERSONAL PORTFOLIOS</h6>
         </div>
       </div>
-      <div className='d-flex justify-content-center'>
-        <div className='main-border-bottom-text text-center'>
+      <div className='d-flex justify-content-center main-border-bottom-text'>
+        <div className='text-center'>
           <h6>© 2022</h6>
         </div>
       </div>
-      <main className={styles.main}>
           <div className='content'>
             <div className="slider d-flex justify-content-center">
               <div className="line"></div>
@@ -795,7 +795,6 @@ return (
             ></div>
             <div className="fe-background-after"></div>
           </div>
-        {/* UIUX TRANSITION SVG */}
       </main>
     </div>
   </div>
