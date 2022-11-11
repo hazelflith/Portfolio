@@ -254,7 +254,7 @@ export default function Uiux() {
         </div>
       </div>
     <div class="intro-transition sticky">
-      <nav class="navbar navbar-expand-lg pt-4 pb-1">
+      <nav class="navbar navbar-expand-lg pt-4 pb-1" id="navbar">
         <div class="navbar-container">
           <div class="d-flex justify-content-between">
           <div class="navbar-brand">
@@ -316,25 +316,67 @@ export default function Uiux() {
           </div>
           <div class="intro-transition5">
             <div class="d-flex project-wrap">
-              <div class="project-text">PROJECTS</div>
+              <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
               <div class="projects">
                 <div class="project">
-                  <div class="project-img"></div>
-                  <div class="project-title">PROJECT #1</div>
+                  <div class="project-img" id="jenius"></div>
+                  <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
+                  <div class="project-title text-end">JENIUS UI/UX CHALLENGE</div>
                 </div>
                 <div class="project">
-                  <div class="project-img"></div>
-                  <div class="project-title">PROJECT #2</div>
+                  <div class="project-img" id="survea"></div>
+                  <div class="project-title-shadow text-end">SURVEA</div>
+                  <div class="project-title text-end">SURVEA</div>
                 </div>
                 <div class="project">
-                  <div class="project-img"></div>
-                  <div class="project-title">PROJECT #3</div>
+                  <div class="project-img" id="gpu"></div>
+                  <div class="project-title-shadow text-end">PC MARKET APP</div>
+                  <div class="project-title text-end">PC MARKET APP</div>
                 </div>
                 <div class="project">
-                  <div class="project-img"></div>
-                  <div class="project-title">PROJECT #4</div>
+                  <div class="project-img" id="covid"></div>
+                  <div class="project-title-shadow text-end">COVID-19 TRACKER</div>
+                  <div class="project-title text-end">COVID-19 TRACKER</div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="pt-5"></div>
+          <div class="pt-5"></div>
+          <div class="pt-5"></div>
+          <div class="footer py-5" id="footer">
+            <div class="row py-4 g-auto">
+              <div class="footer-col">
+                <div>
+                  <a class="nav-link footer-text" href="">INSTAGRAM</a>  
+                </div>
+                <div>
+                  <a class="nav-link footer-text" href="">GITHUB</a> 
+                </div>
+                <div>
+                  <a class="nav-link footer-text" href="">DRIBBLE</a>
+                </div>
+              </div>
+              <div class="footer-col"></div>
+              <div class="footer-col"></div>
+              <div class="footer-col"></div>
+            </div>
+            <div class="row g-auto">
+              <div class="footer-col">
+                <a class="nav-link footer-text" href="">HARISPTRTM@GMAIL.COM</a>
+              </div>
+              <div class="footer-col">
+                <a class="nav-link footer-text" href="">INDONESIA, JAKARTA</a>
+                
+              </div>
+              <div class="footer-col footer-end-col">
+                <a class="nav-link footer-text" href="">082126913015</a>
+                <a class="nav-link footer-text" href="">BACK TO TOP</a>
+              </div>
+              
+            </div>
+            <div class="get-in-touch">
+              GET IN TOUCH
             </div>
           </div>
         </div>

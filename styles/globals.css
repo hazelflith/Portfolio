@@ -735,6 +735,13 @@ a {
   width: 900px;
   height: auto;
   background-color:#212529;
+  filter: brightness(50%);
+  transition: 1s ease-out;
+  cursor: pointer;
+}
+.project-img:hover{
+  filter: brightness(75%);
+  scale: 1.05;
 }
 .project-title{
   position: absolute;
@@ -744,6 +751,19 @@ a {
   font-weight: 400;
   font-size: 4.75em;
   color: white;
+  line-height: 1.2em;
+  max-width: 80%;
+}
+.project-title-shadow{
+  position: absolute;
+  bottom: 9%;
+  right: -21%;
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  font-size: 4.75em;
+  color: #212529;
+  line-height: 1.2em;
+  max-width: 80%;
 }
 .indonesia-wrapper{
   position: relative;
@@ -793,4 +813,56 @@ a {
   left: -20%;
   z-index: -2;
   scale: 1.5;
+}
+.get-in-touch{
+  margin-top: .25em;
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  line-height: .85;
+  font-size: 8.75em;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  cursor: pointer;
+}
+.get-in-touch:hover{
+  color: #d52ba0;
+}
+.footer-col{
+  flex-basis: calc(100% / 3);
+  padding: 0 calc(2vw * .5);
+  font-size: .8em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-end-col{
+  flex-direction: row;
+  align-items: flex-end;
+}
+.footer-text{
+  font-size: 1.5em;
+}
+.footer-text:hover{
+  color: #d52ba0;
+}
+#jenius{
+  background: url(/images/jenius.png) no-repeat;
+  background-size: contain;
+}
+#survea{
+  background: url(/images/survea.png) no-repeat;
+  background-size: contain;
+}
+#gpu{
+  background: url(/images/gpu.png) no-repeat;
+  background-size: contain;
+}
+#covid{
+  background: url(/images/covid.png) no-repeat;
+  background-size: contain;
 }
