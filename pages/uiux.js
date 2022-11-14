@@ -83,28 +83,32 @@ export default function Uiux() {
       color: "red",
       duration: 1,
       ease: "expo",
+      textShadow: "10px 10px white"
     })
-    gsap.to(".indonesia1", {
-      x: 12,
-      y: 12,
-      duration: 1,
-      ease: "expo",
-    })
+    // gsap.to(".indonesia1", {
+    //   x: 12,
+    //   y: 12,
+    //   autoAlpha: 0,
+    //   duration: 1,
+    //   ease: "expo",
+    // })
   })
   }
   function indonesiaHoverStop(){
     indonesia.add(() => {
       gsap.to(".indonesia2", {
-        color: "#212529",
+        color: "transparent",
         duration: 1,
         ease: "expo",
+        textShadow: "none"
       })
-      gsap.to(".indonesia1", {
-        x: 0,
-        y: 0,
-        duration: 1,
-        ease: "expo",
-      })
+      // gsap.to(".indonesia1", {
+      //   x: 0,
+      //   y: 0,
+      //   autoAlpha: 0,
+      //   duration: 1,
+      //   ease: "expo",
+      // })
     })
   }
   class ShapeOverlays {
@@ -231,7 +235,7 @@ export default function Uiux() {
                   <stop offset="100%" stop-color= "rgb(239, 98, 159)"></stop>
                 </linearGradient>
               </defs>
-              <path class="path-blob1" fill="url(#gradient2)" d="M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z">
+              <path class="path-blob1" fill="url(#gradient3)" d="M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z">
               </path>
             </g>
           </svg>
@@ -247,7 +251,7 @@ export default function Uiux() {
         <div class="blob3">
           <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%">
             <g transform="translate(128.8225326538086, -8.702774047851562)">
-            <path class="path-blob1" fill="url(#gradient1)" d="M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z">
+            <path class="path-blob1" fill="url(#gradient2)" d="M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z">
             </path>
             </g>
           </svg>
@@ -258,7 +262,7 @@ export default function Uiux() {
         <div class="navbar-container">
           <div class="d-flex justify-content-between">
           <div class="navbar-brand">
-            <h6 class="ui-brand m-0" >Haris Putratama</h6>
+            <h6 class="ui-brand m-0">Haris Putratama</h6>
           </div>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="ms-auto navbar-nav">
@@ -288,15 +292,13 @@ export default function Uiux() {
       <div class="container">
         <div class="content-ui">
           <div class="intro-transition2">
-            <div class="uiux-hero mt-5">
-              <div>UI/UX DESIGNER</div>
-              <div>BASED ON JAKARTA,</div>
-              <div class="indonesia-wrapper" 
+            <div class="uiux-hero my-5">
+              <div class="">UI/UX DESIGNER</div>
+              <div class="">FROM JAKARTA,</div>
+              <div>
+              <div class="indonesia2"
               onMouseEnter={indonesiaHover}
-              onMouseLeave={indonesiaHoverStop}
-              >
-                <div class="indonesia1">INDONESIA</div>
-                <div class="indonesia2">INDONESIA</div>
+              onMouseLeave={indonesiaHoverStop}>INDONESIA</div>
               </div>
             </div>
           </div>
@@ -306,17 +308,18 @@ export default function Uiux() {
             </div>
           </div>
           <div class="intro-transition4">
-            <div class="ms-auto uiux-hero3">
-              <h6>Your site or application looks will reflect how your company deliver messages and your culture, By establishing a
+            <div class="ms-auto uiux-hero3 invert-2">
+              <h5 class="hero3-text">Your site or application looks will reflect how your company deliver messages and your culture, By establishing a
                 modern designs and aesthetic measures your client will think about how your company will please them. That&apos;s why you need
                 a great designs. Having competencies on making mobile and web mockups, I can help you to achieve your imagination and 
                 making ease of your project Design phase. I like to design modern and out of the box concept with interactive interfaces. 
-              </h6>
+              </h5>
             </div>
           </div>
           <div class="intro-transition5">
             <div class="d-flex project-wrap">
               <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
+              <div class="project-line"></div>
               <div class="projects">
                 <div class="project">
                   <div class="project-img" id="jenius"></div>
@@ -348,13 +351,13 @@ export default function Uiux() {
             <div class="row py-4 g-auto">
               <div class="footer-col">
                 <div>
-                  <a class="nav-link footer-text" href="">INSTAGRAM</a>  
+                  <a class="nav-link footer-text " href="">INSTAGRAM</a>  
                 </div>
                 <div>
-                  <a class="nav-link footer-text" href="">GITHUB</a> 
+                  <a class="nav-link footer-text " href="">GITHUB</a> 
                 </div>
                 <div>
-                  <a class="nav-link footer-text" href="">DRIBBLE</a>
+                  <a class="nav-link footer-text " href="">DRIBBLE</a>
                 </div>
               </div>
               <div class="footer-col"></div>
@@ -363,19 +366,19 @@ export default function Uiux() {
             </div>
             <div class="row g-auto">
               <div class="footer-col">
-                <a class="nav-link footer-text" href="">HARISPTRTM@GMAIL.COM</a>
+                <a class="nav-link footer-text " href="">HARISPTRTM@GMAIL.COM</a>
               </div>
               <div class="footer-col">
-                <a class="nav-link footer-text" href="">INDONESIA, JAKARTA</a>
+                <a class="nav-link footer-text " href="">INDONESIA, JAKARTA</a>
                 
               </div>
               <div class="footer-col footer-end-col">
-                <a class="nav-link footer-text" href="">082126913015</a>
-                <a class="nav-link footer-text" href="">BACK TO TOP</a>
+                <a class="nav-link footer-text " href="">082126913015</a>
+                <a class="nav-link footer-text " href="">BACK TO TOP</a>
               </div>
               
             </div>
-            <div class="get-in-touch">
+            <div class="get-in-touch ">
               GET IN TOUCH
             </div>
           </div>

@@ -17,9 +17,6 @@ a {
 * {
   box-sizing: border-box;
 }
-#uiux{
-  background: #c9efde;
-}
 #main-border{
   margin: 30px;
   border: 3px solid;
@@ -624,8 +621,17 @@ a {
 .navbar{
   backdrop-filter: blur(5px);
 }
+.navbar-brand{
+  color: #3ca89c;
+}
+.navbar-brand:hover{
+  color: #3ca89c;
+}
 .nav-link{
-  color: black;
+  color: #a16dbe;
+}
+.nav-link:hover{
+  color: #d52ba0;
 }
 .blur1{
   width: 100%;
@@ -683,33 +689,43 @@ a {
 .content-ui{
   padding-top: 100px;
 }
-.navbar-line{
-  opacity: 0.5;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 1px;
-  background-color: black;
-}
 .uiux-hero{
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
-  font-size: 5.75em;
+  font-size: 6.75em;
   line-height: 1em;
-  transform: scale(1, 1.25);
-  margin-bottom: 160px;
+  background: linear-gradient(134deg, #35ac9a -0.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
 }
 .uiux-hero2{
+  background: linear-gradient(134deg, #35ac9a -0.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   max-width: 700px;
   margin-bottom: 5em;
 }
 .uiux-hero3{
+  background: linear-gradient(134deg, #35ac9a -0.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-top: 0px;
-  max-width: 520px;
+  max-width: 600px;
   padding-bottom: 0px;
+  text-align: justify;
+}
+.hero3-text{
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .project-wrap{
+  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
   margin-top: -200px;
 }
 .project-text{
@@ -720,7 +736,15 @@ a {
   padding-top: 300px;
   max-width: 135px;
   line-height: 100%;
-  border-right: 10px solid #212529;
+  border-right: 10px solid transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.project-line{
+  width: 10px;
+  height: inherit;
+  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 47.81%, #9674c1 97.48%);
 }
 .projects{
   padding-top: 300px;
@@ -734,7 +758,6 @@ a {
   aspect-ratio: 16 / 9;
   width: 900px;
   height: auto;
-  background-color:#212529;
   filter: brightness(50%);
   transition: 1s ease-out;
   cursor: pointer;
@@ -761,7 +784,7 @@ a {
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
   font-size: 4.75em;
-  color: #212529;
+  color: #49303f;
   line-height: 1.2em;
   max-width: 80%;
 }
@@ -773,11 +796,12 @@ a {
   top: 0;
   left: 0;
   color: white;
+  opacity: 0;
 }
 .indonesia2{
-  position: absolute;
-  top: 0;
-  left: 0;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .blob-bg{
   position: absolute;
@@ -813,6 +837,13 @@ a {
   left: -20%;
   z-index: -2;
   scale: 1.5;
+  opacity: 0.5;
+}
+.footer{
+  background: linear-gradient(318deg, #4dffe5 -0.14%, #fc84ff 47.81%, #c69aff 97.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .get-in-touch{
   margin-top: .25em;
@@ -821,12 +852,13 @@ a {
   text-align: center;
   line-height: .85;
   font-size: 8.75em;
-  position: relative;
-  z-index: 1;
-  display: flex;
   justify-content: center;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
 }
 .get-in-touch:hover{
   color: #d52ba0;
@@ -846,9 +878,20 @@ a {
 }
 .footer-text{
   font-size: 1.5em;
+  font-weight: 500;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .footer-text:hover{
   color: #d52ba0;
+}
+.invert{
+  filter: invert(1);
+  mix-blend-mode: exclusion;
+}
+.invert-2{
+  mix-blend-mode: exclusion;
 }
 #jenius{
   background: url(/images/jenius.png) no-repeat;
