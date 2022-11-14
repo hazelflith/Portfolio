@@ -124,7 +124,7 @@ export default function Home() {
       });
       gsap.to(".ui-detail", {
         opacity: 1,
-        x : "35vw",
+        x : "36.5vw",
         duration: 1.5,
         ease: "expo"
       });

@@ -312,7 +312,7 @@ export default function Uiux() {
               <h5 class="hero3-text">Your site or application looks will reflect how your company deliver messages and your culture, By establishing a
                 modern designs and aesthetic measures your client will think about how your company will please them. That&apos;s why you need
                 a great designs. Having competencies on making mobile and web mockups, I can help you to achieve your imagination and 
-                making ease of your project Design phase. I like to design modern and out of the box concept with interactive interfaces. 
+                making ease of your project Design phase. I like to design modern and out of the box concept with interactive interfaces and <b>GRADIENTS!!!</b>
               </h5>
             </div>
           </div>
@@ -344,8 +344,6 @@ export default function Uiux() {
               </div>
             </div>
           </div>
-          <div class="pt-5"></div>
-          <div class="pt-5"></div>
           <div class="pt-5"></div>
           <div class="footer py-5" id="footer">
             <div class="row py-4 g-auto">

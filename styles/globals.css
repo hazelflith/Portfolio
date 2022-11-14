@@ -547,9 +547,6 @@ a {
     top: 14vh;
     left: -9vw;
   }
-  .fe-bigpicture{
-    top: 30vh;
-  }
   .uiux-background{
     top: 14vh;
     left: 25vw;
@@ -723,7 +720,7 @@ a {
   -webkit-background-clip: text;
 }
 .project-wrap{
-  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 75.81%, #9674c1 97.48%);
   background-clip: text;
   -webkit-background-clip: text;
   margin-top: -200px;
@@ -744,7 +741,7 @@ a {
 .project-line{
   width: 10px;
   height: inherit;
-  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 47.81%, #9674c1 97.48%);
+  background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 75.81%, #9674c1 97.48%);
 }
 .projects{
   padding-top: 300px;
