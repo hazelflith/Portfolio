@@ -606,9 +606,6 @@ a {
 .intro-transition4{
   opacity: 0;
 }
-.intro-transition5{
-  opacity: 0;
-}
 .navbar-container{
   padding-left: 100px;
   padding-right: 100px;
@@ -718,6 +715,18 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+.trigger1{
+  opacity: 0;
+}
+.trigger2{
+  opacity: 0;
+}
+.trigger3{
+  opacity: 0;
+}
+.trigger4{
+  opacity: 0;
 }
 .project-wrap{
   background: linear-gradient(179deg, #35ac9a 30.14%, #b860ba 75.81%, #9674c1 97.48%);
@@ -841,6 +850,7 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 0;
 }
 .get-in-touch{
   margin-top: .25em;

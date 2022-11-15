@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head'
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from 'next/router'
 
 export default function Uiux() {
@@ -11,45 +12,40 @@ export default function Uiux() {
   let elmOverlay
   let overlay
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     document.body.style.backgroundColor = "#c9efde";
     elmHamburger = document.querySelector('.btn-home');
     gNavItems = document.querySelectorAll('.global-menu__item');
     elmOverlay = document.querySelector('.shape-overlays');
     overlay = new ShapeOverlays(elmOverlay);
     let ctx = gsap.context(() => {
+      gsap.to(".blob-bg", {
+        autoAlpha: 1,
+        duration: 2.75,
+        delay: 1.5,
+        ease: "expo",
+      })
       gsap.to(".intro-transition", {
-        opacity: 1,
+        autoAlpha: 1,
         duration: 2.75,
         ease: "expo",
       })
       gsap.to(".intro-transition2", {
-        opacity: 1,
+        autoAlpha: 1,
         duration: 2.75,
         delay: 0.25,
         ease: "expo",
       })
       gsap.to(".intro-transition3", {
-        opacity: 1,
+        autoAlpha: 1,
         duration: 2.75,
-        delay: 0.45,
+        delay: 0.5,
         ease: "expo",
       })
       gsap.to(".intro-transition4", {
-        opacity: 1,
+        autoAlpha: 1,
         duration: 2.75,
-        delay: 0.60,
-        ease: "expo",
-      })
-      gsap.to(".intro-transition5", {
-        opacity: 1,
-        duration: 2.75,
-        delay: 0.70,
-        ease: "expo",
-      })
-      gsap.to(".blob-bg", {
-        opacity: 1,
-        duration: 2.75,
-        delay: 1.5,
+        delay: 0.75,
         ease: "expo",
       })
       const end= "M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z";
@@ -60,9 +56,50 @@ export default function Uiux() {
       blob1.to(".path-blob1", {attr: { d: morph2 }});
       blob1.to(".path-blob1", {attr: { d: end }});
     });
+    gsap.to(".trigger1", {
+      autoAlpha: 1,
+      duration: 2.75,
+      scrollTrigger: {
+        trigger: ".trigger1"
+      },
+      ease: "expo",
+    })
+    gsap.to(".trigger2", {
+      autoAlpha: 1,
+      duration: 2.75,
+      scrollTrigger: {
+        trigger: ".trigger2"
+      },
+      ease: "expo",
+    })
+    gsap.to(".trigger3", {
+      autoAlpha: 1,
+      duration: 2.75,
+      scrollTrigger: {
+        trigger: ".trigger3"
+      },
+      ease: "expo",
+    })
+    gsap.to(".trigger4", {
+      autoAlpha: 1,
+      duration: 2.75,
+      scrollTrigger: {
+        trigger: ".trigger4"
+      },
+      ease: "expo",
+    })
+    gsap.to(".footer", {
+      autoAlpha: 1,
+      duration: 2.75,
+      scrollTrigger: {
+        trigger: ".footer"
+      },
+      ease: "expo",
+    })
     return () => ctx.revert();
     
   }, []); 
+  
   let indonesia = gsap.context(() =>{});
   let blur = gsap.context(() =>{});
   function removeBlur(){
@@ -321,22 +358,22 @@ export default function Uiux() {
               <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
               <div class="project-line"></div>
               <div class="projects">
-                <div class="project">
+                <div class="project trigger1">
                   <div class="project-img" id="jenius"></div>
                   <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
                   <div class="project-title text-end">JENIUS UI/UX CHALLENGE</div>
                 </div>
-                <div class="project">
+                <div class="project trigger2">
                   <div class="project-img" id="survea"></div>
                   <div class="project-title-shadow text-end">SURVEA</div>
                   <div class="project-title text-end">SURVEA</div>
                 </div>
-                <div class="project">
+                <div class="project trigger3">
                   <div class="project-img" id="gpu"></div>
                   <div class="project-title-shadow text-end">PC MARKET APP</div>
                   <div class="project-title text-end">PC MARKET APP</div>
                 </div>
-                <div class="project">
+                <div class="project trigger4">
                   <div class="project-img" id="covid"></div>
                   <div class="project-title-shadow text-end">COVID-19 TRACKER</div>
                   <div class="project-title text-end">COVID-19 TRACKER</div>
