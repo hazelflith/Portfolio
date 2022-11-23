@@ -2,12 +2,13 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Head from 'next/head';
 import { gsap } from "gsap";
 
-export default function fe() {
+export default function Fe() {
   const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
   const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const nums = '0123456789';
   const alphabet = katakana + latin + nums;
   const fontSize = 16;
+
   useEffect(() => {
     document.body.style.backgroundColor = "black";
     let ctx = gsap.context(() => {
