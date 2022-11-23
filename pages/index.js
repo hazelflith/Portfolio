@@ -12,6 +12,16 @@ export default function Home() {
   let gNavItems
   let elmOverlay
   let overlay
+  let canvas
+  let context
+
+  const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+  const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const nums = '0123456789';
+  const alphabet = katakana + latin + nums;
+  const fontSize = 16;
+
+  
   useEffect(() => {
     document.body.style.backgroundColor = "white";
     elmHamburger = document.querySelector('.ui-btn');
@@ -24,9 +34,10 @@ export default function Home() {
         duration: 2,
         ease: "expo",
       })
-    });
+    }); 
     return () => ctx.revert();
     
+
   }, []); // <- empty dependency Array so it doesn't re-run on every render!
 
   let leftTL = gsap.context(() => {});
@@ -35,8 +46,9 @@ export default function Home() {
   let rightTL = gsap.context(() =>{});
   let rightOverlay = gsap.context(() => {});
   let rightHV = gsap.context(() =>{});
+  let matrixTransition = gsap.context(() =>{});
   var rightClick = false;
-
+ 
   function leftHover(){
     leftHV.add(()=>{
       gsap.to(".uiux-bigpicture", {
@@ -673,129 +685,178 @@ export default function Home() {
     }
     overlay.toggle();
   }
+  function drawMatrix(){
+    canvas = document.getElementById('Matrix');
+    context = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const columns = canvas.width/fontSize;
+    const rainDrops = [];
+
+    for( let x = 0; x < columns; x++ ) {
+      rainDrops[x] = 1;
+    }
+
+    const draw = () => {
+      context.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      
+      context.fillStyle = '#0F0';
+      context.font = fontSize + 'px monospace';
+
+      for(let i = 0; i < rainDrops.length; i++)
+      {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+        
+        if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+          router.push('/fe');
+        }
+        rainDrops[i]++;
+      }
+    };
+    setInterval(draw, 30);
+    
+  }
+  function startMatrixTransition() {
+    matrixTransition.add(() => {
+      gsap.set(".matrix-transition", { 
+        zIndex: 99
+      });
+    });
+    drawMatrix();
+    
+  }
 return (
   <>
   <Analytics />
-  <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
-    <defs>
-      <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%"   stop-color="#00c99b"/>
-        <stop offset="100%" stop-color="#ff0ea1"/>
-      </linearGradient>
-      <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%"   stop-color="#ffd392"/>
-        <stop offset="100%" stop-color="#ff3898"/>
-      </linearGradient>
-      <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop stop-color="#FFFFC1"/>
-      <stop offset=".70" stop-color="#FFA9F1"/>
-      <stop offset="1" stop-color="#9FFFE6"/>
-      </linearGradient>
-    </defs>
-    <path fill="url(#gradient1)" class="shape-overlays__path"></path>
-    <path fill="url(#gradient2)" class="shape-overlays__path"></path>
-    <path fill="#c9efde" class="shape-overlays__path"></path>
-  </svg>
-  <div class="intro-transition">
-    <div className={styles.container} id="main-border">
-      <Head>
-        <title>Home | Haris Putratama</title>
-        <meta name="description" content="Haris's Personal Portfolios" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-      <div className='d-flex justify-content-center main-border-top-text '>
-        <div className='text-center'>
-          <h6>HARIS PUTRATAMA</h6>
-          <h6>PERSONAL PORTFOLIOS</h6>
-        </div>
-      </div>
-      <div className='d-flex justify-content-center main-border-bottom-text'>
-        <div className='text-center'>
-          <h6>© 2022</h6>
-        </div>
-      </div>
-          <div className='content'>
-            <div className="slider d-flex justify-content-center">
-              <div className="line"></div>
-              <div className="elipse"></div>
-            </div>
-            <div className="row gx-0">
-              <div className='left-side col'>
-                <div className="ui-mockup">
-                  <div className="ui1"></div>
-                  <div className="ui2"></div>
-                  <div className="ui3"></div>
-                  <div className="ui4"></div>
-                  <div className="ui5"></div>
-                  <div className="ui6"></div>
-                  <div className="ui7"></div>
-                  <div className="ui8"></div>
-                </div>
-                <div className="btn btn-primary ui-btn" 
-                  onClick={startTransition}
-                >
-                  View Details
-                </div>
-                <div className="ui-detail">
-                    <h3><b>Tools:</b></h3>
-                    <div className="ui-icons d-flex gx-3">
-                      <img className="me-2" width="100%" src="/images/tools.png" alt=""/>
-                    </div>
-                  
-                </div>
-                <div className="radiant-purple"></div>
-                <div className="uiux-bigpicture"></div>
-                <div className="uiux-bigpicture-colored"
-                onClick = {leftAnimationStop}></div>
-                <div className="uiux-background" 
-                onClick = {leftAnimation} 
-                onMouseEnter = {leftHover}
-                onMouseLeave = {leftHoverStop}
-                ></div>
-              </div>
-              <div className="right-side col">
-                <div className="fe-mockup">
-                  <div className="fe1"></div>
-                  <div className="fe2"></div>
-                  <div className="fe3"></div>
-                  <div className="fe4"></div>
-                  <div className="fe5"></div>
-                </div>
-                <Link className="btn btn-primary fe-btn" href="/fe">View Details</Link>
-                <div className="fe-detail">
-                    <h3><b>Language:</b></h3>
-                    <div className="fe-icons d-flex gx-3">
-                      <img className="me-2" width="80%" src="/images/language.png" alt=""/>
-                    </div>
-                </div>
-                <div className="radiant-blue"></div>
-                <div className="fe-bigpicture"
-                onClick = {rightAnimation} 
-                onMouseEnter = {rightHover}
-                onMouseLeave = {rightHoverStop}
-                ></div>
-                <div className="fe-bigpicture-colored"
-                onClick = {rightAnimationStop} 
-                ></div>
-                <div className="fe-background"></div>
-                <div className="fe-background2"></div>
-              </div>
-            </div>
-            <div className="left-overlay"></div>
-            <div className="left-overlay2"></div>
-            <div className="left-close-overlay"
-            onClick = {leftAnimationStop}
-            ></div>
-            <div className="uiux-background-after"></div>
-            <div className="right-overlay"></div>
-            <div className="right-overlay2"></div>
-            <div className="right-close-overlay"
-            onClick = {rightAnimationStop}
-            ></div>
-            <div className="fe-background-after"></div>
+  <div class="index-container">
+    <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stop-color="#00c99b"/>
+          <stop offset="100%" stop-color="#ff0ea1"/>
+        </linearGradient>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%"   stop-color="#ffd392"/>
+          <stop offset="100%" stop-color="#ff3898"/>
+        </linearGradient>
+        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop stop-color="#FFFFC1"/>
+        <stop offset=".70" stop-color="#FFA9F1"/>
+        <stop offset="1" stop-color="#9FFFE6"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#gradient1)" class="shape-overlays__path"></path>
+      <path fill="url(#gradient2)" class="shape-overlays__path"></path>
+      <path fill="#c9efde" class="shape-overlays__path"></path>
+    </svg>
+    <canvas class="matrix-transition" id="Matrix"></canvas>
+    <div class="intro-transition">
+      <div className={styles.container} id="main-border">
+        <Head>
+          <title>Home | Haris Putratama</title>
+          <meta name="description" content="Haris's Personal Portfolios" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <main className={styles.main}>
+        <div className='d-flex justify-content-center main-border-top-text '>
+          <div className='text-center'>
+            <h6>HARIS PUTRATAMA</h6>
+            <h6>PERSONAL PORTFOLIOS</h6>
           </div>
-      </main>
+        </div>
+        <div className='d-flex justify-content-center main-border-bottom-text'>
+          <div className='text-center'>
+            <h6>© 2022</h6>
+          </div>
+        </div>
+            <div className='content'>
+              <div className="slider d-flex justify-content-center">
+                <div className="line"></div>
+                <div className="elipse"></div>
+              </div>
+              <div className="row gx-0">
+                <div className='left-side col'>
+                  <div className="ui-mockup">
+                    <div className="ui1"></div>
+                    <div className="ui2"></div>
+                    <div className="ui3"></div>
+                    <div className="ui4"></div>
+                    <div className="ui5"></div>
+                    <div className="ui6"></div>
+                    <div className="ui7"></div>
+                    <div className="ui8"></div>
+                  </div>
+                  <div className="btn btn-primary ui-btn" 
+                    onClick={startTransition}
+                  >
+                    View Details
+                  </div>
+                  <div className="ui-detail">
+                      <h3><b>Tools:</b></h3>
+                      <div className="ui-icons d-flex gx-3">
+                        <img className="me-2" width="100%" src="/images/tools.png" alt=""/>
+                      </div>
+                    
+                  </div>
+                  <div className="radiant-purple"></div>
+                  <div className="uiux-bigpicture"></div>
+                  <div className="uiux-bigpicture-colored"
+                  onClick = {leftAnimationStop}></div>
+                  <div className="uiux-background" 
+                  onClick = {leftAnimation} 
+                  onMouseEnter = {leftHover}
+                  onMouseLeave = {leftHoverStop}
+                  ></div>
+                </div>
+                <div className="right-side col">
+                  <div className="fe-mockup">
+                    <div className="fe1"></div>
+                    <div className="fe2"></div>
+                    <div className="fe3"></div>
+                    <div className="fe4"></div>
+                    <div className="fe5"></div>
+                  </div>
+                  <div className="btn btn-primary fe-btn" 
+                  onClick={startMatrixTransition}
+                  >
+                    View Details
+                  </div>
+                  <div className="fe-detail">
+                      <h3><b>Language:</b></h3>
+                      <div className="fe-icons d-flex gx-3">
+                        <img className="me-2" width="80%" src="/images/language.png" alt=""/>
+                      </div>
+                  </div>
+                  <div className="radiant-blue"></div>
+                  <div className="fe-bigpicture"
+                  onClick = {rightAnimation} 
+                  onMouseEnter = {rightHover}
+                  onMouseLeave = {rightHoverStop}
+                  ></div>
+                  <div className="fe-bigpicture-colored"
+                  onClick = {rightAnimationStop} 
+                  ></div>
+                  <div className="fe-background"></div>
+                  <div className="fe-background2"></div>
+                </div>
+              </div>
+              <div className="left-overlay"></div>
+              <div className="left-overlay2"></div>
+              <div className="left-close-overlay"
+              onClick = {leftAnimationStop}
+              ></div>
+              <div className="uiux-background-after"></div>
+              <div className="right-overlay"></div>
+              <div className="right-overlay2"></div>
+              <div className="right-close-overlay"
+              onClick = {rightAnimationStop}
+              ></div>
+              <div className="fe-background-after"></div>
+            </div>
+        </main>
+      </div>
     </div>
   </div>
   </>

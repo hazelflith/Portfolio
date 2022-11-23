@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Head from 'next/head'
+import Head from 'next/head';
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -295,7 +295,7 @@ export default function Uiux() {
         </div>
       </div>
     <div class="intro-transition sticky">
-      <nav class="navbar navbar-expand-lg pt-4 pb-1" id="navbar">
+      <nav class="navbar navbar-expand-lg pt-4 pb-4" id="navbar">
         <div class="navbar-container">
           <div class="d-flex justify-content-between">
           <div class="navbar-brand">
@@ -325,7 +325,7 @@ export default function Uiux() {
         <div class="blur8"></div>
       </div>
       
-      </div>
+    </div>
       <div class="container">
         <div class="content-ui">
           <div class="intro-transition2">

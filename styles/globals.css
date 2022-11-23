@@ -593,6 +593,15 @@ a {
   position: relative;
   overflow: hidden;
 }
+.fe-container{
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+.index-container{
+  position: relative;
+  overflow: hidden;
+}
 .intro-transition{
   opacity: 0;
   position: relative;
@@ -615,8 +624,15 @@ a {
 .navbar{
   backdrop-filter: blur(5px);
 }
+#fe-navbar{
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.5);
+}
 .navbar-brand{
   color: #3ca89c;
+}
+#fe-brand{
+  color: #0f0;
 }
 .navbar-brand:hover{
   color: #3ca89c;
@@ -626,6 +642,12 @@ a {
 }
 .nav-link:hover{
   color: #d52ba0;
+}
+#fe-link{
+  color: #0f0;
+}
+#fe-link:hover{
+  color: rgb(0, 155, 0);
 }
 .blur1{
   width: 100%;
@@ -915,4 +937,24 @@ a {
 #covid{
   background: url(/images/covid.png) no-repeat;
   background-size: contain;
+}
+#Matrix{
+ 
+}
+.matrix-transition{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.matrix-background{
+  opacity: 0;
+  z-index: -5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.opaque{
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
 }
