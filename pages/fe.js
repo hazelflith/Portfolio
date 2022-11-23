@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Head from 'next/head';
 import { gsap } from "gsap";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Fe() {
   const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
@@ -21,6 +22,12 @@ export default function Fe() {
         autoAlpha: 1,
         duration: 2.75,
         delay: 1.25,
+        ease: "expo",
+      })
+      gsap.to(".parallax-container", {
+        autoAlpha: 1,
+        duration: 2.75,
+        delay: 1.5,
         ease: "expo",
       })
     });
@@ -63,6 +70,7 @@ export default function Fe() {
   }, []); 
   return (
     <>
+    <Analytics />
     <Head>
       <title>FrontEnd | Haris Putratama</title>
       <meta name="description" content="Haris's UIUX Personal Portfolios" />
@@ -91,6 +99,20 @@ export default function Fe() {
               </div>
             </div>
           </nav>
+        </div>
+        <div class="parallax-container">
+          <div class="parallax">
+              <div class="parallax__layer parallax__layer__0">
+                  <img src="images/city3.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__1">
+                  <img src="images/city2.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__2">
+                  <img src="images/city1.png" />
+              </div>
+              <div class="parallax__cover"></div>
+          </div>
         </div>
       </div>
     </div>
