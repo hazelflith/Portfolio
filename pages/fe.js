@@ -102,14 +102,23 @@ export default function Fe() {
         </div>
         <div class="parallax-container">
           <div class="parallax">
-              <div class="parallax__layer parallax__layer__0">
-                  <img src="images/city3.png" />
-              </div>
               <div class="parallax__layer parallax__layer__1">
-                  <img src="images/city2.png" />
+                  <img src="images/layer1.png" />
               </div>
               <div class="parallax__layer parallax__layer__2">
-                  <img src="images/city1.png" />
+                  <img src="images/layer2.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__3">
+                  <img src="images/layer3.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__4">
+                  <img src="images/layer4.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__5">
+                  <img src="images/layer5.png" />
+              </div>
+              <div class="parallax__layer parallax__layer__6">
+                  <img src="images/layer6.png" />
               </div>
               <div class="parallax__cover"></div>
           </div>
