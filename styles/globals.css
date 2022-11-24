@@ -1017,3 +1017,11 @@ a {
   transform: translateZ(0px) scale(1);
 }
 
+.fe-hero{
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  font-size: 6.75em;
+  line-height: 1em;
+  color: rgb(43, 43, 43);
+  
+}
