@@ -15,9 +15,11 @@
     "framer-motion": "^7.6.4",
     "glsl-easings": "^1.0.0",
     "gsap": "^3.11.3",
+    "howler": "^2.2.3",
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-howler": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "8.26.0",

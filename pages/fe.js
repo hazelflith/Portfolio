@@ -2,14 +2,20 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import Head from 'next/head';
 import { gsap } from "gsap";
 import { Analytics } from '@vercel/analytics/react';
+import { useRouter } from 'next/router'
+import ReactHowler from 'react-howler'
 
 export default function Fe() {
+  const router = useRouter();
   const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
   const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const nums = '0123456789';
   const alphabet = katakana + latin + nums;
   const fontSize = 16;
-
+  
+  let matrixTransition = gsap.context(() =>{});
+  let canvas2
+  let context2
   useEffect(() => {
     document.body.style.backgroundColor = "black";
     let ctx = gsap.context(() => {
@@ -51,7 +57,7 @@ export default function Fe() {
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
       
-      context.fillStyle = '#0F0';
+      context.fillStyle = '#f00';
       context.font = fontSize + 'px monospace';
 
       for(let i = 0; i < rainDrops.length; i++)
@@ -67,7 +73,51 @@ export default function Fe() {
     };
 
     setInterval(draw, 30);
-  }, []); 
+  }, []);
+  
+  function drawMatrix(){
+    canvas2 = document.getElementById('Matrix2');
+    context2 = canvas2.getContext('2d');
+    canvas2.width = window.innerWidth;
+    canvas2.height = window.innerHeight;
+    const columns2 = canvas2.width/fontSize;
+    const rainDrops2 = [];
+
+    for( let x = 0; x < columns2; x++ ) {
+      rainDrops2[x] = 1;
+    }
+
+    const draw2 = () => {
+      context2.fillStyle = 'rgba(255, 255, 255, 0.1)';
+      context2.fillRect(0, 0, canvas2.width, canvas2.height);
+      
+      context2.fillStyle = '#f00';
+      context2.font = fontSize + 'px monospace';
+
+      for(let i = 0; i < rainDrops2.length; i++)
+      {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        context2.fillText(text, i*fontSize, rainDrops2[i]*fontSize);
+        
+        if(rainDrops2[i]*fontSize > canvas2.height && Math.random() > 0.975){
+          clearInterval(intervalID);
+          router.push('/');
+        }
+        rainDrops2[i]++;
+      }
+    };
+    const intervalID = setInterval(draw2, 30);
+    
+  }
+  function startMatrixTransition() {
+    matrixTransition.add(() => {
+      gsap.set(".matrix-transition", { 
+        zIndex: 9999
+      });
+    });
+    drawMatrix();
+    
+  }
   return (
     <>
     <Analytics />
@@ -76,8 +126,13 @@ export default function Fe() {
       <meta name="description" content="Haris's UIUX Personal Portfolios" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <ReactHowler
+        src='audio/strangerthings.mp3'
+        playing={true}
+      />
     <div class="fe-container">
        <canvas class="matrix-background" id="Matrix"></canvas>
+       <canvas class="matrix-transition" id="Matrix2"></canvas>
        <div class="opaque">
         <div class="sticky">
           <nav class="navbar navbar-expand-lg pt-4 pb-4" id="fe-navbar">
@@ -89,7 +144,7 @@ export default function Fe() {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="ms-auto navbar-nav">
                     <li class="nav-item">
-                      <a class="btn-home nav-link" id="fe-link">Home</a>
+                      <a class="btn-home nav-link" id="fe-link" onClick={startMatrixTransition}>Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#" id="fe-link">Contact</a>
@@ -125,6 +180,7 @@ export default function Fe() {
         </div>
       </div>
     </div>
+    
     </>
   );
 }

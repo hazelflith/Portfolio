@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps }) {
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"/>
             <Script src="js/easings.js"></Script>
+            <script src="/path/to/howler.js"></script>
+
             <Component {...pageProps} />  
         </>
     )

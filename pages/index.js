@@ -701,7 +701,7 @@ export default function Home() {
       context.fillStyle = 'rgba(0, 0, 0, 0.1)';
       context.fillRect(0, 0, canvas.width, canvas.height);
       
-      context.fillStyle = '#0F0';
+      context.fillStyle = '#f00';
       context.font = fontSize + 'px monospace';
 
       for(let i = 0; i < rainDrops.length; i++)
@@ -710,12 +710,13 @@ export default function Home() {
         context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
         
         if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+          clearInterval(intervalID);
           router.push('/fe');
         }
         rainDrops[i]++;
       }
     };
-    setInterval(draw, 30);
+    const intervalID = setInterval(draw, 30);
     
   }
   function startMatrixTransition() {
