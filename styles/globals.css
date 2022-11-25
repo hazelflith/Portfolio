@@ -17,6 +17,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 #main-border{
   margin: 30px;
   border: 3px solid;
@@ -967,17 +968,16 @@ a {
   overflow-y: auto;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   right: 0;
   bottom: 0;
-  margin-left: -1500px;
 }
 .parallax__layer {
   position: absolute;
   top: 0;
   right: 0;
   bottom: -10%;
-  left: 0;
+  left: -74%;
 }
 .parallax__layer img {
   display: block;
@@ -994,26 +994,23 @@ a {
   height: 2000px;
   z-index: 2;
 }
-.parallax__layer__0 {
-  transform: translateZ(-300px) scale(4);
-}
 .parallax__layer__1 {
-  transform: translateZ(-250px) scale(3.5);
+  transform: translateX(-30px)translateZ(-250px) scale(3.5);
 }
 .parallax__layer__2 {
-  transform: translateZ(-200px) scale(3);
+  transform: translateX(50px)translateZ(-200px) scale(3);
 }
 .parallax__layer__3 {
-  transform: translateZ(-150px) scale(2.5);
+  transform: translateX(120px) translateY(75px) translateZ(-150px) scale(2.5);
 }
 .parallax__layer__4 {
-  transform: translateZ(-100px) scale(2);
+  transform: translateX(225px) translateY(75px) translateZ(-100px) scale(2);
 }
 .parallax__layer__5 {
-  transform: translateZ(-50px) scale(1.5);
+  transform: translateX(310px) translateZ(-50px) scale(1.5);
 }
 .parallax__layer__6 {
-  transform: translateZ(0px) scale(1);
+  transform: translateX(310px) translateZ(0px) scale(1);
 }
 
 .fe-hero{
@@ -1023,4 +1020,36 @@ a {
   line-height: 1em;
   color: rgb(43, 43, 43);
   
+}
+
+
+.fe-text-hero{
+  font-family: "neons", sans-serif;
+  color: #700;
+  font-size: 7.5em;
+  font-weight: 800;
+  text-shadow: -1px 0 #FF0000, 0 1px #FF0000, 1px 0 #FF0000, 0 -1px #FF0000;
+  border-bottom: 3px solid #f00;
+  margin-bottom: 24px;
+}
+.fe-text-introduction{
+  text-align: justify;
+}
+.color-red{
+  color:#f00;
+}
+.mt-n1 {
+  margin-top: -0.5rem !important;
+}
+.mb-n1 {
+  margin-bottom: -0.5rem !important;
+}
+#cursor{
+  margin-left: 2px;
+  font-size: x-large;
+  color: #f00;
+}
+#text1{
+  font-size: x-large;
+  color: #f00;
 }

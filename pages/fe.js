@@ -4,7 +4,11 @@ import { gsap } from "gsap";
 import { Analytics } from '@vercel/analytics/react';
 import { useRouter } from 'next/router'
 import ReactHowler from 'react-howler'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { TextPlugin } from "gsap/dist/TextPlugin";
+import localFont from '@next/font/local';
 
+const myFont = localFont({ src: './neons.otf' })
 export default function Fe() {
   const router = useRouter();
   const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
@@ -17,6 +21,8 @@ export default function Fe() {
   let canvas2
   let context2
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(TextPlugin);
     document.body.style.backgroundColor = "black";
     let ctx = gsap.context(() => {
       gsap.to(".fe-container", {
@@ -36,7 +42,23 @@ export default function Fe() {
         delay: 1.5,
         ease: "expo",
       })
+      
+      gsap.fromTo('#cursor', {
+        autoAlpha: 0, x: -20}, 
+        {autoAlpha: 1, 
+          duration: 0.5, 
+          repeat: -1, 
+          ease: "steps(1)"
+        });
+      gsap.to("#text1", {
+        duration: 15, 
+        text: "Hello! my name is Haris, I am a frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your imaginations! Capable of programming javascripts, html and css i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. Feel free to contact me if you have any proposals!", 
+        delay: 5,
+        ease: "linear"
+      })
     });
+
+    
 
     let canvas = document.getElementById('Matrix');
     let context = canvas.getContext('2d');
@@ -129,6 +151,8 @@ export default function Fe() {
     <ReactHowler
         src='audio/strangerthings.mp3'
         playing={true}
+        loop={true}
+        preload={true}
       />
     <div class="fe-container">
        <canvas class="matrix-background" id="Matrix"></canvas>
@@ -144,10 +168,10 @@ export default function Fe() {
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="ms-auto navbar-nav">
                     <li class="nav-item">
-                      <a class="btn-home nav-link" id="fe-link" onClick={startMatrixTransition}>Home</a>
+                      <a class="btn-home nav-link" id="fe-link" onClick={startMatrixTransition}>	&lt;/Home&gt;</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#" id="fe-link">Contact</a>
+                      <a class="nav-link" href="#" id="fe-link">&lt;/Contact&gt;</a>
                     </li>
                   </ul>
                 </div>
@@ -175,7 +199,23 @@ export default function Fe() {
               <div class="parallax__layer parallax__layer__6">
                   <img src="images/layer6.png" />
               </div>
-              <div class="parallax__cover"></div>
+              <div class="parallax__cover">
+                <div class="container fe-content">
+                  <div class="color-red mb-n1">&lt;h1&gt;</div>
+                  <div className={myFont.className}>
+                    <div class="fe-text-hero">
+                      INTRODUCTION
+                    </div>
+                  </div>
+                  <div class="color-red text-end mt-n1 mb-1">&lt;/h1&gt;</div>
+                  <div class="color-red">&lt;p&gt;</div>
+                  <div class="fe-text-introduction">
+                    <span id="text1"></span>
+                    <span id="cursor">|</span>
+                  </div>
+                  <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                </div>
+              </div>
           </div>
         </div>
       </div>

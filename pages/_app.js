@@ -7,6 +7,7 @@ import { motion , AnimatePresence} from 'framer-motion';
 
 
 
+
 function MyApp({ Component, pageProps }) {
     useEffect(()=>{
         import("bootstrap/dist/js/bootstrap");
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }) {
             <Script src="js/easings.js"></Script>
             <Script src="/path/to/howler.js"></Script>
 
-            <Component {...pageProps} />  
+            <main>
+                <Component {...pageProps} />
+            </main>
         </>
     )
 }
