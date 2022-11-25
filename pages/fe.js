@@ -17,6 +17,7 @@ export default function Fe() {
   const alphabet = katakana + latin + nums;
   const fontSize = 16;
   
+  
   let matrixTransition = gsap.context(() =>{});
   let canvas2
   let context2
@@ -24,6 +25,29 @@ export default function Fe() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(TextPlugin);
     document.body.style.backgroundColor = "black";
+    let timeline = gsap.timeline({
+      scrollTrigger: {
+      scroller: ".parallax",
+      trigger: "#fe-text-hero"
+    }});
+    timeline.to("#text1", {
+      duration: 5, 
+      text: "Hello! my name is Haris, I am a (creative) frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your out of the box wild imaginations! Capable of programming JavaScripts, HTML and CSS i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. I am committed to creating fluent user experiences while staying pleasurable to watch. Feel free to contact me if you have any proposals!", 
+      delay: 1,
+      ease: "linear"
+    })
+    timeline.to("#tech", {
+      autoAlpha: 1,
+      duration: 2.75,
+      delay: 0.5,
+      ease: "expo",
+    })
+    timeline.to("#text2", {
+      duration: 4, 
+      text: "I have experiences to code using ReactJS, VueJS, NextJS, Laravel, Wordpress, Python, C++, PHP, and Axios. In building JavaScript applications, I'm equipped with just the right tools & libraries, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale performance and aesthetics are priorities on my radar.", 
+      ease: "linear"
+    })
+  
     let ctx = gsap.context(() => {
       gsap.to(".fe-container", {
         autoAlpha: 1,
@@ -49,24 +73,6 @@ export default function Fe() {
           repeat: -1, 
           ease: "steps(1)"
         })
-      gsap.to("#text1", {
-        duration: 10, 
-        text: "Hello! my name is Haris, I am a (creative) frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your out of the box wild imaginations! Capable of programming JavaScripts, html and css i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. I am committed to creating fluent user experiences while staying fashionable. Feel free to contact me if you have any proposals!", 
-        delay: 4,
-        ease: "linear"
-      })
-      gsap.to("#tech", {
-        autoAlpha: 1,
-        duration: 2.75,
-        delay: 15,
-        ease: "expo",
-      })
-      gsap.to("#text2", {
-        duration: 7, 
-        text: "I have experiences to code using ReactJS, VueJS, NextJS, Laravel, Wordpress, Python, C++, PHP, and Axios. In building JavaScript applications, I'm equipped with just the right tools & libraries, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale performance and aesthetics are priorities on my radar.", 
-        delay: 16.5,
-        ease: "linear"
-      })
     });
 
     
