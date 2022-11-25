@@ -889,7 +889,8 @@ a {
   color: transparent;
   
 }
-.get-in-touch:hover{
+#get-in-touch-btn:hover{
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   color: #d52ba0;
 }
 .footer-col{
@@ -976,7 +977,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: -10%;
+  bottom: -5%;
   left: 0%;
 }
 .parallax__layer img {
@@ -1023,8 +1024,6 @@ a {
   color: rgb(43, 43, 43);
   
 }
-
-
 .fe-text-hero{
   font-family: "neons", sans-serif;
   color: #700;
@@ -1036,6 +1035,12 @@ a {
 }
 .fe-text-introduction{
   text-align: justify;
+}
+.fe-heading{
+  color: #700;
+  font-size: 5em;
+  font-weight: 800;
+  text-shadow: -1px 0 #FF0000, 0 1px #FF0000, 1px 0 #FF0000, 0 -1px #FF0000;
 }
 .color-red{
   color:#f00;
@@ -1054,4 +1059,59 @@ a {
 #text1{
   font-size: x-large;
   color: #f00;
+}
+#text2{
+  font-size: x-large;
+  color: #f00;
+}
+#tech{
+  opacity: 0;
+}
+.tech-stack-wrapper{
+  position:relative;
+}
+.tech1{
+  color: #f00;
+  position:absolute;
+  top: 40%;
+  left: 20%;
+  font-size:xx-large;
+  animation: grow 3s linear 0s infinite;
+}
+.tech2{
+  color: #f00;
+  position:absolute;
+  top: 32%;
+  left: 45%;
+  font-size:xx-large;
+  animation: grow 3s linear 1s infinite;
+}
+.tech3{
+  color: #f00;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  font-size:xx-large;
+  animation: grow 3s linear 2s infinite;
+}
+.tech4{
+  color: #f00;
+  position:absolute;
+  top: 59%;
+  left: 20%;
+  font-size:xx-large;
+  animation: grow 3s linear 3s infinite;
+}
+@keyframes grow {
+  0% {scale: 1; color: #f00;}
+  25% {scale: 1.1;}
+  50% {scale: 1.2; color: #700;}
+  75% {scale: 1.1;}
+  100% {scale: 1; color: #f00;}
+}
+.lottie1{
+  margin-top: -25%;
+  margin-left: -20%;
+  height: 125%;
+  width: 125%;
 }

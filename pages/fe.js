@@ -42,18 +42,29 @@ export default function Fe() {
         delay: 1.5,
         ease: "expo",
       })
-      
       gsap.fromTo('#cursor', {
         autoAlpha: 0, x: -20}, 
         {autoAlpha: 1, 
           duration: 0.5, 
           repeat: -1, 
           ease: "steps(1)"
-        });
+        })
       gsap.to("#text1", {
-        duration: 15, 
-        text: "Hello! my name is Haris, I am a frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your imaginations! Capable of programming javascripts, html and css i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. Feel free to contact me if you have any proposals!", 
-        delay: 5,
+        duration: 10, 
+        text: "Hello! my name is Haris, I am a (creative) frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your out of the box wild imaginations! Capable of programming JavaScripts, html and css i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. I am committed to creating fluent user experiences while staying fashionable. Feel free to contact me if you have any proposals!", 
+        delay: 4,
+        ease: "linear"
+      })
+      gsap.to("#tech", {
+        autoAlpha: 1,
+        duration: 2.75,
+        delay: 15,
+        ease: "expo",
+      })
+      gsap.to("#text2", {
+        duration: 7, 
+        text: "I have experiences to code using ReactJS, VueJS, NextJS, Laravel, Wordpress, Python, C++, PHP, and Axios. In building JavaScript applications, I'm equipped with just the right tools & libraries, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale performance and aesthetics are priorities on my radar.", 
+        delay: 16.5,
         ease: "linear"
       })
     });
@@ -214,6 +225,35 @@ export default function Fe() {
                     <span id="cursor">|</span>
                   </div>
                   <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                  <div class="row mt-5"></div>
+                  <div class="row mt-5"></div>
+                  <div class="row mt-5" id="tech">
+                    <div class="col">
+                      <div class="tech-stack-wrapper">
+                        <div class="tech1">VueJS</div>
+                        <div class="tech2">ReactJS</div>
+                        <div class="tech3">PHP</div>
+                        <div class="tech4">Laravel</div>
+                        <lottie-player src="lottie/circle.json" background="transparent" speed="1" class="lottie1" loop autoplay>
+                        </lottie-player>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="color-red mb-n1">&lt;h3&gt;</div>
+                      <div className={myFont.className}>
+                        <div class="fe-heading">
+                          TECH STACK
+                        </div>
+                      </div>
+                      <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
+                      <div class="color-red">&lt;p&gt;</div>
+                      <div class="fe-text-introduction">
+                        <span id="text2"></span>
+                        <span id="cursor">|</span>
+                      </div> 
+                      <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    </div>
+                  </div>
                 </div>
               </div>
           </div>

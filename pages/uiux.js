@@ -386,13 +386,13 @@ export default function Uiux() {
             <div class="row py-4 g-auto">
               <div class="footer-col">
                 <div>
-                  <a class="nav-link footer-text " href="">INSTAGRAM</a>  
+                  <a class="nav-link footer-text " href="https://www.instagram.com/harisptrtm/">INSTAGRAM</a>  
                 </div>
                 <div>
-                  <a class="nav-link footer-text " href="">GITHUB</a> 
+                  <a class="nav-link footer-text " href="https://github.com/hazelflith">GITHUB</a> 
                 </div>
                 <div>
-                  <a class="nav-link footer-text " href="">DRIBBLE</a>
+                  <a class="nav-link footer-text " href="https://dribbble.com/hazelflith">DRIBBLE</a>
                 </div>
               </div>
               <div class="footer-col"></div>
@@ -401,20 +401,20 @@ export default function Uiux() {
             </div>
             <div class="row g-auto">
               <div class="footer-col">
-                <a class="nav-link footer-text " href="">HARISPTRTM@GMAIL.COM</a>
+                <a class="nav-link footer-text " href="mailto:harisptrtm@gmail.com">HARISPTRTM@GMAIL.COM</a>
               </div>
               <div class="footer-col">
-                <a class="nav-link footer-text " href="">INDONESIA, JAKARTA</a>
+                <a class="nav-link footer-text " href="#">INDONESIA, JAKARTA</a>
                 
               </div>
               <div class="footer-col footer-end-col">
-                <a class="nav-link footer-text " href="">082126913015</a>
+                <a class="nav-link footer-text " href="tel:6282126913015">082126913015</a>
                 <a class="nav-link footer-text " href="">BACK TO TOP</a>
               </div>
               
             </div>
-            <div class="get-in-touch ">
-              GET IN TOUCH
+            <div class="get-in-touch">
+              <a id="get-in-touch-btn" href="https://wa.me/6282126913015" >GET IN TOUCH</a>
             </div>
           </div>
         </div>
