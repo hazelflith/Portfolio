@@ -1025,8 +1025,9 @@ a {
   
 }
 .fe-text-hero{
+  font-family: 'nuixyber', sans-serif;
   color: #ff2f2f;
-  font-size: 9em;
+  font-size: 11em;
   text-shadow: 1px 0px 4px #ff2f2f, 2px 0px 4px #ff2f2f, 3px 0px 4px #ff2f2f, 2px 0px 3px #f00, 2px 3px 15px #f00, 2px 0px 15px, 5px 0px 50px, 20px 0vw 200px #f00, 40px 0vw 125px #f00;
 }
 .neon-lightbar{
@@ -1041,16 +1042,17 @@ a {
   text-align: justify;
 }
 .fe-heading{
+  font-family: 'nuixyber', sans-serif;
   color: #ff2f2f;
-  font-size: 5em;
+  font-size: 7em;
   text-shadow: 1px 0px 4px #ff2f2f, 2px 0px 4px #ff2f2f, 3px 0px 4px #ff2f2f, 2px 0px 3px #f00, 2px 3px 15px #f00, 2px 0px 15px, 5px 0px 50px, 20px 0vw 200px #f00, 40px 0vw 125px #f00;
 }
 @media screen and (max-width: 1024px){
   .fe-text-hero{
-    font-size: 7.5em;
+    font-size: 9.5em;
   }
   .fe-heading{
-    font-size: 4em;
+    font-size: 6em;
   }
 }
 .color-red{

@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { Analytics } from '@vercel/analytics/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-  
+
 export default function Home() {
   const router = useRouter();
   let elmHamburger

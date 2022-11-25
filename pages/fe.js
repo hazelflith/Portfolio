@@ -6,10 +6,9 @@ import { useRouter } from 'next/router'
 import ReactHowler from 'react-howler'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { TextPlugin } from "gsap/dist/TextPlugin";
-import localFont from '@next/font/local';
 
-const myFont = localFont({ src: './neons.otf' })
 export default function Fe() {
+  
   const router = useRouter();
   const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
   const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -217,7 +216,7 @@ export default function Fe() {
               </div>
               <div class="parallax__cover">
                 <div class="container fe-content">
-                  <div className={myFont.className}>
+                  <div>
                     <div class="fe-text-hero text-full" id="fe-text-hero">
                         <span class="flicker-slow">INTROD</span>UC<span class="flicker-slow">TION</span>
                     </div>
@@ -244,7 +243,7 @@ export default function Fe() {
                     </div>
                     <div class="col">
                       <div class="color-red mb-n1">&lt;h3&gt;</div>
-                      <div className={myFont.className}>
+                      <div>
                         <div class="fe-heading">
                           TECH <span class="flicker-slow">STACK</span>
                         </div>
