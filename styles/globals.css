@@ -977,12 +977,14 @@ a {
   top: 0;
   right: 0;
   bottom: -10%;
-  left: -74%;
+  left: 0%;
 }
 .parallax__layer img {
   display: block;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  scale: 1.25;
 }
 .parallax__cover {
   background: black;
@@ -995,22 +997,22 @@ a {
   z-index: 2;
 }
 .parallax__layer__1 {
-  transform: translateX(-30px)translateZ(-250px) scale(3.5);
+  transform: translateZ(-250px) scale(3.5);
 }
 .parallax__layer__2 {
-  transform: translateX(50px)translateZ(-200px) scale(3);
+  transform: translateZ(-200px) scale(3);
 }
 .parallax__layer__3 {
-  transform: translateX(120px) translateY(75px) translateZ(-150px) scale(2.5);
+  transform: translateZ(-150px) scale(2.5);
 }
 .parallax__layer__4 {
-  transform: translateX(225px) translateY(75px) translateZ(-100px) scale(2);
+  transform: translateZ(-100px) scale(2);
 }
 .parallax__layer__5 {
-  transform: translateX(310px) translateZ(-50px) scale(1.5);
+  transform: translateZ(-50px) scale(1.5);
 }
 .parallax__layer__6 {
-  transform: translateX(310px) translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
 }
 
 .fe-hero{
