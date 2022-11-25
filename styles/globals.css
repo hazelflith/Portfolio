@@ -1025,22 +1025,33 @@ a {
   
 }
 .fe-text-hero{
-  font-family: "neons", sans-serif;
-  color: #700;
-  font-size: 7.5em;
-  font-weight: 800;
-  text-shadow: -1px 0 #FF0000, 0 1px #FF0000, 1px 0 #FF0000, 0 -1px #FF0000;
-  border-bottom: 3px solid #f00;
+  color: #ff2f2f;
+  font-size: 9em;
+  text-shadow: 1px 0px 4px #ff2f2f, 2px 0px 4px #ff2f2f, 3px 0px 4px #ff2f2f, 2px 0px 3px #f00, 2px 3px 15px #f00, 2px 0px 15px, 5px 0px 50px, 20px 0vw 200px #f00, 40px 0vw 125px #f00;
+}
+.neon-lightbar{
+  width: 100%;
+  height: 2px;
+  background-color: #ff2f2f;
+  box-shadow: 1px 0px 4px #ff2f2f, 2px 0px 4px #ff2f2f, 3px 0px 4px #ff2f2f, 2px 0px 3px #f00, 2px 3px 15px #f00, 2px 0px 15px, 5px 0px 50px, 20px 0vw 200px #f00, 40px 0vw 125px #f00;
+  margin-top: 12px;
   margin-bottom: 24px;
 }
 .fe-text-introduction{
   text-align: justify;
 }
 .fe-heading{
-  color: #700;
+  color: #ff2f2f;
   font-size: 5em;
-  font-weight: 800;
-  text-shadow: -1px 0 #FF0000, 0 1px #FF0000, 1px 0 #FF0000, 0 -1px #FF0000;
+  text-shadow: 1px 0px 4px #ff2f2f, 2px 0px 4px #ff2f2f, 3px 0px 4px #ff2f2f, 2px 0px 3px #f00, 2px 3px 15px #f00, 2px 0px 15px, 5px 0px 50px, 20px 0vw 200px #f00, 40px 0vw 125px #f00;
+}
+@media screen and (max-width: 1024px){
+  .fe-text-hero{
+    font-size: 7.5em;
+  }
+  .fe-heading{
+    font-size: 4em;
+  }
 }
 .color-red{
   color:#f00;
@@ -1102,12 +1113,28 @@ a {
   font-size:xx-large;
   animation: grow 3s linear 3s infinite;
 }
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
 @keyframes grow {
   0% {scale: 1; color: #f00;}
   25% {scale: 1.1;}
   50% {scale: 1.2; color: #700;}
   75% {scale: 1.1;}
   100% {scale: 1; color: #f00;}
+}
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		/* text-shadow: none; */
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
 }
 .lottie1{
   margin-top: -25%;

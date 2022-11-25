@@ -28,7 +28,7 @@ export default function Fe() {
     let timeline = gsap.timeline({
       scrollTrigger: {
       scroller: ".parallax",
-      trigger: "#fe-text-hero"
+      trigger: ".fe-text-hero"
     }});
     timeline.to("#text1", {
       duration: 5, 
@@ -74,7 +74,6 @@ export default function Fe() {
           ease: "steps(1)"
         })
     });
-
     
 
     let canvas = document.getElementById('Matrix');
@@ -218,13 +217,12 @@ export default function Fe() {
               </div>
               <div class="parallax__cover">
                 <div class="container fe-content">
-                  <div class="color-red mb-n1">&lt;h1&gt;</div>
                   <div className={myFont.className}>
-                    <div class="fe-text-hero">
-                      INTRODUCTION
+                    <div class="fe-text-hero text-full" id="fe-text-hero">
+                        <span class="flicker-slow">INTROD</span>UC<span class="flicker-slow">TION</span>
                     </div>
                   </div>
-                  <div class="color-red text-end mt-n1 mb-1">&lt;/h1&gt;</div>
+                  <div class="neon-lightbar flicker-slow"></div>
                   <div class="color-red">&lt;p&gt;</div>
                   <div class="fe-text-introduction">
                     <span id="text1"></span>
@@ -248,7 +246,7 @@ export default function Fe() {
                       <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div className={myFont.className}>
                         <div class="fe-heading">
-                          TECH STACK
+                          TECH <span class="flicker-slow">STACK</span>
                         </div>
                       </div>
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
