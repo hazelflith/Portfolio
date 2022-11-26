@@ -731,6 +731,7 @@ export default function Home() {
 return (
   <>
   <Analytics />
+  <canvas class="matrix-transition" id="Matrix"></canvas>
   <div class="index-container">
     <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
       <defs>
@@ -752,7 +753,7 @@ return (
       <path fill="url(#gradient2)" class="shape-overlays__path"></path>
       <path fill="#c9efde" class="shape-overlays__path"></path>
     </svg>
-    <canvas class="matrix-transition" id="Matrix"></canvas>
+    
     <div class="intro-transition">
       <div className={styles.container} id="main-border">
         <Head>

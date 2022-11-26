@@ -31,7 +31,7 @@ export default function Fe() {
     }});
     timeline.to("#text1", {
       duration: 5, 
-      text: "Hello! my name is Haris, I am a (creative) frontend developer from Indonesia, I like to be able to code my own design, I can help you to achieve your out of the box wild imaginations! Capable of programming JavaScripts, HTML and CSS i can accomplish most of design needs. I used to implement bootstrap gridding on my project to make the web responsive. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. I am committed to creating fluent user experiences while staying pleasurable to watch. Feel free to contact me if you have any proposals!", 
+      text: "Hello! my name is Haris, I am a (creative) frontend developer from Indonesia, I like to be able to code my own design, I can help to achieve your out of the box wild imaginations! Capable of programming JavaScripts, HTML and CSS i can accomplish most of your design needs. I used to implement bootstrap gridding on my project to make responsive web. I also used to make animations and interactive websites by implementing GSAP and Framer Motion. I am committed to creating fluent user experiences while staying fashionable. Feel free to contact me if you have any proposals!", 
       delay: 1,
       ease: "linear"
     })
@@ -215,6 +215,11 @@ export default function Fe() {
                   <img src="images/layer6.png" />
               </div>
               <div class="parallax__cover">
+              <div class="fog-container">
+                <div class="fog-img fog-img-first"></div>
+                <div class="fog-img fog-img-second"></div>
+                <div class="fog-img linear-overlay"></div>
+              </div>
                 <div class="container fe-content">
                   <div>
                     <div class="fe-text-hero text-full" id="fe-text-hero">
