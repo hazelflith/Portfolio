@@ -340,7 +340,7 @@ export default function Fe() {
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
                       <div class="color-red">&lt;p&gt;</div>
                       <div class="fe-project-text">
-                      A revamp on Dreamaxtion (former company) Landing Page which aims to introduce company's potential to the client. Designed with professional and playful modern vibes. Built with VueJS + Laravel.
+                      A revamp on Dreamaxtion (former company) Landing Page which aims to introduce company&apos;s potential to the client. Designed with professional and playful modern vibes. Built with VueJS + Laravel.
                       </div> 
                       <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
                     </div>
