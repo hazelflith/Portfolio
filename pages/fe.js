@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import ReactHowler from 'react-howler'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { TextPlugin } from "gsap/dist/TextPlugin";
+import $ from "jquery"
 
 export default function Fe() {
   
@@ -110,6 +111,16 @@ export default function Fe() {
     };
 
     setInterval(draw, 30);
+
+    $(document).ready(function() {
+      var el = $(".parallax__cover")
+      var el2 = $(".parallax__layer__6")
+      var cave = $("#cave")
+      var height = el.height() + el2.height();
+      console.log(height);
+      $(".parallax__layer2").css("top",height - 50);
+      $(".parallax__cover2").css("top",height + cave.height() - 50);
+    });
   }, []);
   
   function drawMatrix(){
@@ -280,7 +291,7 @@ export default function Fe() {
                   <img src="images/cave2.png" />
               </div>
               <div class="parallax__layer2 parallax__layer__12">
-                  <img src="images/cave1.png" />
+                  <img id="cave" src="images/cave1.png" />
               </div>
               <div class="parallax__cover2">
 
