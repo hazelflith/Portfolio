@@ -47,7 +47,7 @@ export default function Fe() {
       text: "I have experiences to code using ReactJS, VueJS, NextJS, Laravel, Wordpress, Python, C++, PHP, and Axios. In building JavaScript applications, I'm equipped with just the right tools & libraries, and can absolutely function independently of them to deliver fast, resilient solutions optimized for scale performance and aesthetics are priorities on my radar.", 
       ease: "linear"
     })
-  
+   
     let ctx = gsap.context(() => {
       gsap.to(".fe-container", {
         autoAlpha: 1,
@@ -73,6 +73,16 @@ export default function Fe() {
           repeat: -1, 
           ease: "steps(1)"
         })
+      gsap.to(".footer", {
+        autoAlpha: 1,
+        duration: 2.75,
+        scrollTrigger: {
+          scroller: ".parallax",
+          trigger: ".footer"
+        },
+        delay: 1.5,
+        ease: "expo",
+      })
     });
     
 
@@ -294,7 +304,105 @@ export default function Fe() {
                   <img id="cave" src="images/cave1.png" />
               </div>
               <div class="parallax__cover2">
-
+                <div class="project-break"></div>
+                <div class="container">
+                  <div class="row fe-project1 gx-5">
+                    <div class="col-6 align-self-center">
+                        <div class="color-red mb-n1">&lt;h3&gt;</div>
+                        <div class="fe-heading">
+                          <span class="flicker-slow">DREAMGURU</span>
+                        </div>
+                        <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
+                        <div class="color-red">&lt;p&gt;</div>
+                        <div class="fe-project-text">
+                        A big project to provide a Learning Management System (LMS) for Dreamaxtion (former company) which aims as an extension for Dreamtalent ecosystem. Developed using VueJS + Laravel 8. Having core function as LMS with 100% customability because I managed to built it from scratch. Having so much features such as Admin Dashboard, Courses, Quizzes, and Gamification.
+                        </div> 
+                        <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="corner-border">
+                        <div id="fe-project-img1"></div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-break"></div>
+                  <div class="row fe-project2 gx-5">
+                    <div class="col-6">
+                      <div class="corner-border">
+                        <div id="fe-project-img2" class="corner-border"></div>
+                      </div>
+                    </div>
+                    <div class="col-6 align-self-center">
+                    <div class="color-red mb-n1">&lt;h3&gt;</div>
+                      <div class="fe-heading">
+                        <span class="flicker-slow">DREAMAXTION</span>
+                      </div>
+                      <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
+                      <div class="color-red">&lt;p&gt;</div>
+                      <div class="fe-project-text">
+                      A revamp on Dreamaxtion (former company) Landing Page which aims to introduce company's potential to the client. Designed with professional and playful modern vibes. Built with VueJS + Laravel.
+                      </div> 
+                      <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    </div>
+                  </div>
+                  <div class="project-break"></div>
+                  <div class="row fe-project3 gx-5">
+                    <div class="col-6 align-self-center">
+                    <div class="color-red mb-n1">&lt;h4&gt;</div>
+                      <div class="fe-heading2">
+                        <span class="flicker-slow">ADELLE ACADEMY</span>
+                      </div>
+                      <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
+                      <div class="color-red">&lt;p&gt;</div>
+                      <div class="fe-project-text">
+                      An Wordpress LMS built with the Learnpress plugin. Built to cooperate existing traditional training into modern digitalized learning. Customized and designed for Adelle Jewellery
+                      </div> 
+                      <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="corner-border">
+                        <div id="fe-project-img3" class="corner-border"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space"></div>
+                  <div class="footer" id="footer">
+                    <div class="row pb-4 g-auto">
+                      <div class="footer-col">
+                        <div>
+                          <a class="nav-link fe-footer-text " href="https://www.instagram.com/harisptrtm/">INSTAGRAM</a>  
+                        </div>
+                        <div>
+                          <a class="nav-link fe-footer-text " href="https://github.com/hazelflith">GITHUB</a> 
+                        </div>
+                        <div>
+                          <a class="nav-link fe-footer-text " href="https://dribbble.com/hazelflith">DRIBBLE</a>
+                        </div>
+                      </div>
+                      <div class="footer-col"></div>
+                      <div class="footer-col"></div>
+                      <div class="footer-col"></div>
+                    </div>
+                    <div class="row g-auto">
+                      <div class="footer-col">
+                        <a class="nav-link fe-footer-text " href="mailto:harisptrtm@gmail.com">HARISPTRTM@GMAIL.COM</a>
+                      </div>
+                      <div class="footer-col">
+                        <a class="nav-link fe-footer-text " href="#">INDONESIA, JAKARTA</a>
+                        
+                      </div>
+                      <div class="footer-col footer-end-col">
+                        <a class="nav-link fe-footer-text " href="tel:6282126913015">082126913015</a>
+                        <a class="nav-link fe-footer-text " href="#">BACK TO TOP</a>
+                      </div>
+                      
+                    </div>
+                    <div class="fe-get-in-touch">
+                      <a id="fe-get-in-touch-btn" href="https://wa.me/6282126913015" >GET IN TOUCH</a>
+                    </div>
+                  </div>
+                  
+                </div>
               </div>
           </div>
         </div>

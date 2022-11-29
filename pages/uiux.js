@@ -412,7 +412,7 @@ export default function Uiux() {
               </div>
               <div class="footer-col footer-end-col">
                 <a class="nav-link footer-text " href="tel:6282126913015">082126913015</a>
-                <a class="nav-link footer-text " href="">BACK TO TOP</a>
+                <a class="nav-link footer-text " href="#">BACK TO TOP</a>
               </div>
               
             </div>
