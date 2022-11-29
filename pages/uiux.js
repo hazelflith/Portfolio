@@ -4,6 +4,8 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from 'next/router'
+import { Analytics } from '@vercel/analytics/react';
+
 
 export default function Uiux() {
   const router = useRouter();
