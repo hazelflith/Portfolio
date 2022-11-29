@@ -157,7 +157,7 @@ export default function Fe() {
   }
   return (
     <>
-    <Analytics/>
+    <Analytics />
     <Head>
       <title>FrontEnd | Haris Putratama</title>
       <meta name="description" content="Haris's UIUX Personal Portfolios" />
