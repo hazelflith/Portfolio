@@ -730,7 +730,7 @@ export default function Home() {
   }
 return (
   <>
-  <Analytics />
+  <Analytics/>
   <canvas class="matrix-transition" id="Matrix"></canvas>
   <div class="index-container">
     <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">

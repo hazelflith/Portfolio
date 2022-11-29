@@ -157,7 +157,7 @@ export default function Fe() {
   }
   return (
     <>
-    <Analytics />
+    <Analytics/>
     <Head>
       <title>FrontEnd | Haris Putratama</title>
       <meta name="description" content="Haris's UIUX Personal Portfolios" />
@@ -263,6 +263,27 @@ export default function Fe() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="parallax__layer2 parallax__layer__7">
+                  <img src="images/cave6.png" />
+              </div>
+              <div class="parallax__layer2 parallax__layer__8">
+                  <img src="images/cave5.png" />
+              </div>
+              <div class="parallax__layer2 parallax__layer__9">
+                  <img src="images/cave4.png" />
+              </div>
+              <div class="parallax__layer2 parallax__layer__10">
+                  <img src="images/cave3.png" />
+              </div>
+              <div class="parallax__layer2 parallax__layer__11">
+                  <img src="images/cave2.png" />
+              </div>
+              <div class="parallax__layer2 parallax__layer__12">
+                  <img src="images/cave1.png" />
+              </div>
+              <div class="parallax__cover2">
+
               </div>
           </div>
         </div>

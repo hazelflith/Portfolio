@@ -963,6 +963,9 @@ a {
 .parallax-container{
   opacity: 0;
 }
+.cave-container{
+  z-index: 3;
+}
 .parallax {
   perspective: 100px;
   height: 100vh;
@@ -981,12 +984,25 @@ a {
   bottom: -5%;
   left: 0%;
 }
+.parallax__layer2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -2070px;
+  left: 0%;
+}
 .parallax__layer img {
   display: block;
   position: absolute;
   bottom: 0;
   width: 100%;
   scale: 1.25;
+}
+.parallax__layer2 img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .parallax__cover {
   background: black;
@@ -995,8 +1011,18 @@ a {
   top: 100%;
   left: 0;
   right: 0;
-  height: 2000px;
+  height: 1400px;
   z-index: 2;
+}
+.parallax__cover2 {
+  background: black;
+  display: block;
+  position: absolute;
+  top: 2790px;
+  left: 0;
+  right: 0;
+  height: 1400px;
+  z-index: 4;
 }
 .parallax__layer__1 {
   transform: translateZ(-250px) scale(3.5);
@@ -1014,6 +1040,24 @@ a {
   transform: translateZ(-50px) scale(1.5);
 }
 .parallax__layer__6 {
+  transform: translateZ(0px) scale(1);
+}
+.parallax__layer__7 {
+  transform: translateY(-2500px) translateZ(-250px) scale(3.5);
+}
+.parallax__layer__8 {
+  transform: translateY(-2000px) translateZ(-200px) scale(3)
+}
+.parallax__layer__9 {
+  transform: translateY(-1500px) translateZ(-150px) scale(2.5);
+}
+.parallax__layer__10 {
+  transform: translateY(-1000px) translateZ(-100px) scale(2);
+}
+.parallax__layer__11 {
+  transform: translateY(-500px) translateZ(-50px) scale(1.5);
+}
+.parallax__layer__12 {
   transform: translateZ(0px) scale(1);
 }
 
