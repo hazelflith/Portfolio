@@ -367,7 +367,7 @@ export default function Uiux() {
             </div>
           </div>
           <div class="intro-transition5">
-            <div class="d-flex project-wrap d-none d-lg-block">
+            <div class="project-wrap d-none d-lg-flex">
               <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
               <div class="project-line"></div>
               <div class="projects">
