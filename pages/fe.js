@@ -127,7 +127,6 @@ export default function Fe() {
       var el2 = $(".parallax__layer__6")
       var cave = $("#cave")
       var height = el.height() + el2.height();
-      console.log(height);
       $(".parallax__layer2").css("top",height - 50);
       $(".parallax__cover2").css("top",height + cave.height() - 50);
     });
@@ -196,7 +195,7 @@ export default function Fe() {
        <div class="opaque">
         <div class="sticky">
           <nav class="navbar navbar-expand-lg pt-4 pb-4" id="fe-navbar">
-            <div class="navbar-container">
+            <div class="navbar-container d-none d-lg-block">
               <div class="d-flex justify-content-between">
                 <div class="navbar-brand" id="fe-brand">
                   <h6 class="ui-brand m-0">Haris Putratama</h6>
@@ -212,6 +211,16 @@ export default function Fe() {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div class="m-navbar-container d-flex d-lg-none justify-content-between">
+              <div class="navbar-brand ms-4" id="fe-brand">
+                <h6 class="ui-brand m-0">Haris Putratama</h6>
+              </div>
+              <ul class="navbar-nav me-4">
+                <li class="nav-item">
+                  <a class="btn-home nav-link" id="fe-link" onClick={startMatrixTransition}>	&lt;/Home&gt;</a>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
@@ -257,7 +266,7 @@ export default function Fe() {
                   <div class="row mt-5"></div>
                   <div class="row mt-5"></div>
                   <div class="row mt-5" id="tech">
-                    <div class="col">
+                    <div class="col-lg-6">
                       <div class="tech-stack-wrapper">
                         <div class="tech1">VueJS</div>
                         <div class="tech2">ReactJS</div>
@@ -267,7 +276,7 @@ export default function Fe() {
                         </lottie-player>
                       </div>
                     </div>
-                    <div class="col">
+                    <div class="col-lg-6">
                       <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div>
                         <div class="fe-heading">
@@ -306,8 +315,8 @@ export default function Fe() {
               <div class="parallax__cover2">
                 <div class="project-break"></div>
                 <div class="container">
-                  <div class="row fe-project1 gx-5">
-                    <div class="col-6 align-self-center">
+                  <div class="row fe-project1 gx-5 d-none d-lg-block">
+                    <div class="col-lg-6 align-self-center">
                         <div class="color-red mb-n1">&lt;h3&gt;</div>
                         <div class="fe-heading">
                           <span class="flicker-slow">DREAMGURU</span>
@@ -319,20 +328,39 @@ export default function Fe() {
                         </div>
                         <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6">
                       <div class="corner-border">
                         <div id="fe-project-img1"></div>  
                       </div>
                     </div>
                   </div>
+                  <div class="row fe-project1 gx-5 d-block d-lg-none">
+                    <div class="col-lg-6">
+                      <div class="corner-border">
+                        <div id="fe-project-img1"></div>  
+                      </div>
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                      <div class="color-red mb-n1">&lt;h3&gt;</div>
+                      <div class="fe-heading">
+                        <span class="flicker-slow">DREAMGURU</span>
+                      </div>
+                      <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
+                      <div class="color-red">&lt;p&gt;</div>
+                      <div class="fe-project-text">
+                      A big project to provide a Learning Management System (LMS) for Dreamaxtion (former company) which aims as an extension for Dreamtalent ecosystem. Developed using VueJS + Laravel 8. Having core function as LMS with 100% customability because I managed to built it from scratch. Having so much features such as Admin Dashboard, Courses, Quizzes, and Gamification.
+                      </div>
+                      <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    </div>
+                  </div>
                   <div class="project-break"></div>
                   <div class="row fe-project2 gx-5">
-                    <div class="col-6">
+                    <div class="col-lg-6">
                       <div class="corner-border">
                         <div id="fe-project-img2" class="corner-border"></div>
                       </div>
                     </div>
-                    <div class="col-6 align-self-center">
+                    <div class="col-lg-6 align-self-center">
                     <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div class="fe-heading">
                         <span class="flicker-slow">DREAMAXTION</span>
@@ -347,27 +375,27 @@ export default function Fe() {
                   </div>
                   <div class="project-break"></div>
                   <div class="row fe-project3 gx-5">
-                    <div class="col-6 align-self-center">
+                  <div class="col-lg-6">
+                    <div class="corner-border">
+                      <div id="fe-project-img3" class="corner-border"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 align-self-center">
                     <div class="color-red mb-n1">&lt;h4&gt;</div>
-                      <div class="fe-heading2">
-                        <span class="flicker-slow">ADELLE ACADEMY</span>
-                      </div>
-                      <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
-                      <div class="color-red">&lt;p&gt;</div>
-                      <div class="fe-project-text">
-                      An Wordpress LMS built with the Learnpress plugin. Built to cooperate existing traditional training into modern digitalized learning. Customized and designed for Adelle Jewellery
-                      </div> 
-                      <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                    <div class="fe-heading2">
+                      <span class="flicker-slow">ADELLE ACADEMY</span>
                     </div>
-                    <div class="col-6">
-                      <div class="corner-border">
-                        <div id="fe-project-img3" class="corner-border"></div>
-                      </div>
-                    </div>
+                    <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
+                    <div class="color-red">&lt;p&gt;</div>
+                    <div class="fe-project-text">
+                    An Wordpress LMS built with the Learnpress plugin. Built to cooperate existing traditional training into modern digitalized learning. Customized and designed for Adelle Jewellery
+                    </div> 
+                    <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                  </div>
                   </div>
                   <div class="space"></div>
                   <div class="footer" id="footer">
-                    <div class="row pb-4 g-auto">
+                    <div class="row pb-4 g-auto d-none d-lg-block">
                       <div class="footer-col">
                         <div>
                           <a class="nav-link fe-footer-text " href="https://www.instagram.com/harisptrtm/">INSTAGRAM</a>  
@@ -383,7 +411,7 @@ export default function Fe() {
                       <div class="footer-col"></div>
                       <div class="footer-col"></div>
                     </div>
-                    <div class="row g-auto">
+                    <div class="row g-auto d-none d-lg-block">
                       <div class="footer-col">
                         <a class="nav-link fe-footer-text " href="mailto:harisptrtm@gmail.com">HARISPTRTM@GMAIL.COM</a>
                       </div>
