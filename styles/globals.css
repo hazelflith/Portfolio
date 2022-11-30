@@ -1430,4 +1430,42 @@ a {
   .parallax__cover2 {
     height: 3000px;
   }
+  .lottie1{
+    margin-top: -15%;
+    margin-left: -10%;
+  }
+  .uiux-hero{
+    font-size: 3em;
+  }
+  .uiux-hero2{
+    font-size: 1em;
+  }
+  .projects{
+    padding-top: 24px;
+    padding-left: 7px;
+  }
+  .project-img{
+    width: 100%;
+    filter: brightness(75%);
+  }
+  .project-img:hover{
+    scale: 1;
+  }
+  .project-title{
+    bottom: 10%;
+    right: 0%;
+    font-size: 1.75em;
+    line-height: 1em;
+    max-width: 80%;
+  }
+  .project-title-shadow{
+    bottom: 9%;
+    right: -1%;
+    font-size: 1.75em;
+    line-height: 1em;
+    max-width: 80%;
+  }
+  .project{
+    margin-bottom: 1em;
+  }
 }

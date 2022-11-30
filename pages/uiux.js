@@ -299,7 +299,7 @@ export default function Uiux() {
       </div>
     <div class="intro-transition sticky">
       <nav class="navbar navbar-expand-lg pt-4 pb-4" id="navbar">
-        <div class="navbar-container">
+        <div class="navbar-container d-none d-lg-block">
           <div class="d-flex justify-content-between">
           <div class="navbar-brand">
             <h6 class="ui-brand m-0">Haris Putratama</h6>
@@ -315,6 +315,16 @@ export default function Uiux() {
             </ul>
           </div>
           </div>
+        </div>
+        <div class="m-navbar-container d-flex d-lg-none justify-content-between">
+          <div class="navbar-brand ms-4">
+            <h6 class="ui-brand m-0">Haris Putratama</h6>
+          </div>
+          <ul class="navbar-nav me-4">
+            <li class="nav-item">
+              <a class="btn-home nav-link" onClick={startTransition}>Home</a>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class="blur-transition">
@@ -357,9 +367,34 @@ export default function Uiux() {
             </div>
           </div>
           <div class="intro-transition5">
-            <div class="d-flex project-wrap">
+            <div class="d-flex project-wrap d-none d-lg-block">
               <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
               <div class="project-line"></div>
+              <div class="projects">
+                <div class="project trigger1">
+                  <div class="project-img" id="jenius"></div>
+                  <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
+                  <div class="project-title text-end">JENIUS UI/UX CHALLENGE</div>
+                </div>
+                <div class="project trigger2">
+                  <div class="project-img" id="survea"></div>
+                  <div class="project-title-shadow text-end">SURVEA</div>
+                  <div class="project-title text-end">SURVEA</div>
+                </div>
+                <div class="project trigger3">
+                  <div class="project-img" id="gpu"></div>
+                  <div class="project-title-shadow text-end">PC MARKET APP</div>
+                  <div class="project-title text-end">PC MARKET APP</div>
+                </div>
+                <div class="project trigger4">
+                  <div class="project-img" id="covid"></div>
+                  <div class="project-title-shadow text-end">COVID-19 TRACKER</div>
+                  <div class="project-title text-end">COVID-19 TRACKER</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-block d-lg-none">
+              <h1 class="uiux-hero mt-5 mb-2">PROJECTS</h1>
               <div class="projects">
                 <div class="project trigger1">
                   <div class="project-img" id="jenius"></div>
@@ -386,7 +421,7 @@ export default function Uiux() {
           </div>
           <div class="pt-5"></div>
           <div class="footer py-5" id="footer">
-            <div class="row py-4 g-auto">
+            <div class="row py-4 g-auto d-none d-lg-block">
               <div class="footer-col">
                 <div>
                   <a class="nav-link footer-text " href="https://www.instagram.com/harisptrtm/">INSTAGRAM</a>  
@@ -402,7 +437,7 @@ export default function Uiux() {
               <div class="footer-col"></div>
               <div class="footer-col"></div>
             </div>
-            <div class="row g-auto">
+            <div class="row g-auto d-none d-lg-block">
               <div class="footer-col">
                 <a class="nav-link footer-text " href="mailto:harisptrtm@gmail.com">HARISPTRTM@GMAIL.COM</a>
               </div>

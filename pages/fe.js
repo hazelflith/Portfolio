@@ -80,7 +80,7 @@ export default function Fe() {
           scroller: ".parallax",
           trigger: ".footer"
         },
-        delay: 1.5,
+        delay: 1,
         ease: "expo",
       })
     });
