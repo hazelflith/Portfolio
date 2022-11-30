@@ -316,7 +316,7 @@ export default function Fe() {
                         <div class="color-red">&lt;p&gt;</div>
                         <div class="fe-project-text">
                         A big project to provide a Learning Management System (LMS) for Dreamaxtion (former company) which aims as an extension for Dreamtalent ecosystem. Developed using VueJS + Laravel 8. Having core function as LMS with 100% customability because I managed to built it from scratch. Having so much features such as Admin Dashboard, Courses, Quizzes, and Gamification.
-                        </div> 
+                        </div>
                         <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
                     </div>
                     <div class="col-6">
