@@ -437,7 +437,7 @@ export default function Uiux() {
               <div class="footer-col"></div>
               <div class="footer-col"></div>
             </div>
-            <div class="row g-auto d-none d-lg-flex">
+            <div class="row g-auto d-none d-lg-block">
               <div class="footer-col">
                 <a class="nav-link footer-text " href="mailto:harisptrtm@gmail.com">HARISPTRTM@GMAIL.COM</a>
               </div>
