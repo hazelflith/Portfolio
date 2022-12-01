@@ -9,11 +9,12 @@ function MyApp({ Component, pageProps }) {
     },[])
     return (
         <>
-            <link href="https://fonts.cdnfonts.com/css/nuixyber" rel="stylesheet"></link>
-            <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet"></link>
-            <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet"></link>
-            <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet"></link>
-            <link href="https://fonts.cdnfonts.com/css/monoton" rel="stylesheet"></link>
+            <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poiret+One&family=Righteous&display=swap" rel="stylesheet"></link>
+            <link rel="preconnect" href="https://fonts.cdnfonts.com" crossOrigin></link>
+            <link href="https://fonts.cdnfonts.com/css/nuixyber" rel="stylesheet" crossOrigin></link>
+            <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet" crossOrigin></link>
             <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"/>
             <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"/>

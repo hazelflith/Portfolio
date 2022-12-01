@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import $ from "jquery"
 
+
 export default function Fe() {
   
   const router = useRouter();
@@ -315,7 +316,7 @@ export default function Fe() {
               <div class="parallax__cover2">
                 <div class="project-break"></div>
                 <div class="container">
-                  <div class="row fe-project1 gx-5 d-none d-lg-block">
+                  <div class="row fe-project1 gx-5 d-none d-lg-flex">
                     <div class="col-lg-6 align-self-center">
                         <div class="color-red mb-n1">&lt;h3&gt;</div>
                         <div class="fe-heading">
@@ -374,7 +375,7 @@ export default function Fe() {
                     </div>
                   </div>
                   <div class="project-break"></div>
-                  <div class="row fe-project3 gx-5">
+                  <div class="row fe-project3 gx-5 d-block d-lg-none">
                   <div class="col-lg-6">
                     <div class="corner-border">
                       <div id="fe-project-img3" class="corner-border"></div>
@@ -391,6 +392,26 @@ export default function Fe() {
                     An Wordpress LMS built with the Learnpress plugin. Built to cooperate existing traditional training into modern digitalized learning. Customized and designed for Adelle Jewellery
                     </div> 
                     <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                  </div>
+                  </div>
+                  <div class="row fe-project3 gx-5 d-none d-lg-flex">
+                  
+                  <div class="col-lg-6 align-self-center">
+                    <div class="color-red mb-n1">&lt;h4&gt;</div>
+                    <div class="fe-heading2">
+                      <span class="flicker-slow">ADELLE ACADEMY</span>
+                    </div>
+                    <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
+                    <div class="color-red">&lt;p&gt;</div>
+                    <div class="fe-project-text">
+                    An Wordpress LMS built with the Learnpress plugin. Built to cooperate existing traditional training into modern digitalized learning. Customized and designed for Adelle Jewellery
+                    </div> 
+                    <div class="color-red text-end ms-auto mb-1">&lt;/p&gt;</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="corner-border">
+                      <div id="fe-project-img3" class="corner-border"></div>
+                    </div>
                   </div>
                   </div>
                   <div class="space"></div>
