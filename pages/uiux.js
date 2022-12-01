@@ -5,7 +5,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from 'next/router'
 import { Analytics } from '@vercel/analytics/react';
+import localFont from '@next/font/local'
 
+// Font files can be colocated inside of `pages`
+const monument = localFont({ src: './MonumentExtended.otf' })
 
 export default function Uiux() {
   const router = useRouter();
@@ -260,6 +263,7 @@ export default function Uiux() {
     <title>UIUX | Haris Putratama</title>
     <meta name="description" content="Haris's UIUX Personal Portfolios" />
     <link rel="icon" href="/favicon.ico" />
+    
   </Head>
     <div class="uiux-container">
       <div class="blob-bg">
@@ -343,12 +347,12 @@ export default function Uiux() {
         <div class="content-ui">
           <div class="intro-transition2">
             <div class="uiux-hero my-5">
-              <div class="">UI/UX DESIGNER</div>
-              <div class="">FROM JAKARTA,</div>
-              <div>
-              <div class="indonesia2"
-              onMouseEnter={indonesiaHover}
-              onMouseLeave={indonesiaHoverStop}>INDONESIA</div>
+              <div className={monument.className}>UI/UX DESIGNER</div>
+              <div className={monument.className}>FROM JAKARTA,</div>
+              <div className={monument.className}>
+                <div class="indonesia2"
+                onMouseEnter={indonesiaHover}
+                onMouseLeave={indonesiaHoverStop}>INDONESIA</div>
               </div>
             </div>
           </div>
@@ -368,9 +372,12 @@ export default function Uiux() {
           </div>
           <div class="intro-transition5">
             <div class="project-wrap d-none d-lg-flex">
-              <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
+              <div className={monument.className}>
+                <div class="project-text">PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS &nbsp;&#10;=&#10;&nbsp; PROJECTS</div>
+              </div>
               <div class="project-line"></div>
               <div class="projects">
+              <div className={monument.className}>
                 <div class="project trigger1">
                   <div class="project-img" id="jenius"></div>
                   <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
@@ -392,30 +399,35 @@ export default function Uiux() {
                   <div class="project-title text-end">COVID-19 TRACKER</div>
                 </div>
               </div>
+              </div>
             </div>
             <div class="d-block d-lg-none">
-              <h1 class="uiux-hero mt-5 mb-2">PROJECTS</h1>
-              <div class="projects">
-                <div class="project trigger1">
-                  <div class="project-img" id="jenius"></div>
-                  <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
-                  <div class="project-title text-end">JENIUS UI/UX CHALLENGE</div>
-                </div>
-                <div class="project trigger2">
-                  <div class="project-img" id="survea"></div>
-                  <div class="project-title-shadow text-end">SURVEA</div>
-                  <div class="project-title text-end">SURVEA</div>
-                </div>
-                <div class="project trigger3">
-                  <div class="project-img" id="gpu"></div>
-                  <div class="project-title-shadow text-end">PC MARKET APP</div>
-                  <div class="project-title text-end">PC MARKET APP</div>
-                </div>
-                <div class="project trigger4">
-                  <div class="project-img" id="covid"></div>
-                  <div class="project-title-shadow text-end">COVID-19 TRACKER</div>
-                  <div class="project-title text-end">COVID-19 TRACKER</div>
-                </div>
+              <div className={monument.className}>
+                <h1 class="uiux-hero mt-5 mb-2" >PROJECTS</h1>
+              </div>
+              <div className={monument.className}>
+                <div class="projects">
+                  <div className="project trigger1">
+                    <div class="project-img" id="jenius"></div>
+                    <div class="project-title-shadow text-end">JENIUS UI/UX CHALLENGE</div>
+                    <div class="project-title text-end">JENIUS UI/UX CHALLENGE</div>
+                  </div>
+                  <div class="project trigger2">
+                    <div class="project-img" id="survea"></div>
+                    <div class="project-title-shadow text-end">SURVEA</div>
+                    <div class="project-title text-end">SURVEA</div>
+                  </div>
+                  <div class="project trigger3">
+                    <div class="project-img" id="gpu"></div>
+                    <div class="project-title-shadow text-end">PC MARKET APP</div>
+                    <div class="project-title text-end">PC MARKET APP</div>
+                  </div>
+                  <div class="project trigger4">
+                    <div class="project-img" id="covid"></div>
+                    <div class="project-title-shadow text-end">COVID-19 TRACKER</div>
+                    <div class="project-title text-end">COVID-19 TRACKER</div>
+                  </div>
+                </div>  
               </div>
             </div>
           </div>
@@ -451,8 +463,9 @@ export default function Uiux() {
               </div>
               
             </div>
+            
             <div class="get-in-touch">
-              <a id="get-in-touch-btn" href="https://wa.me/6282126913015" >GET IN TOUCH</a>
+              <a id="get-in-touch-btn" className={monument.className} href="https://wa.me/6282126913015" >GET IN TOUCH</a>
             </div>
           </div>
         </div>

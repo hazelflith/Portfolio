@@ -775,6 +775,7 @@ return (
       <title>Home | Haris Putratama</title>
       <meta name="description" content="Haris's Personal Portfolios" />
       <link rel="icon" href="/favicon.ico" />
+      
     </Head>
     <div class="intro-transition">
       <div className={styles.container} id="main-border">

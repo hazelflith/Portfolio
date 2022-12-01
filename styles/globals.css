@@ -677,7 +677,6 @@ a {
   padding-top: 100px;
 }
 .uiux-hero{
-  font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
   font-size: 6.75em;
   line-height: 1em;
@@ -728,7 +727,7 @@ a {
   margin-top: -200px;
 }
 .project-text{
-  font-family: 'Monument Extended', sans-serif;
+ 
   font-weight: 400;
   font-size: 5.75em;
   word-wrap: break-word;
@@ -769,7 +768,7 @@ a {
   position: absolute;
   bottom: 10%;
   right: -20%;
-  font-family: 'Monument Extended', sans-serif;
+
   font-weight: 400;
   font-size: 4.75em;
   color: white;
@@ -780,7 +779,7 @@ a {
   position: absolute;
   bottom: 9%;
   right: -21%;
-  font-family: 'Monument Extended', sans-serif;
+ 
   font-weight: 400;
   font-size: 4.75em;
   color: #49303f;
@@ -847,11 +846,11 @@ a {
 }
 .get-in-touch{
   margin-top: .25em;
-  font-family: 'Monument Extended', sans-serif;
+  
   font-weight: 800;
   text-align: center;
   line-height: .85;
-  font-size: 8.75em;
+  font-size: 8.25em;
   justify-content: center;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   cursor: pointer;
@@ -1031,7 +1030,7 @@ a {
 }
 
 .fe-hero{
-  font-family: 'Monument Extended', sans-serif;
+ 
   font-weight: 400;
   font-size: 6.75em;
   line-height: 1em;
@@ -1218,11 +1217,10 @@ a {
 }
 .fe-get-in-touch{
   margin-top: .25em;
-  font-family: 'Monument Extended', sans-serif;
   font-weight: 800;
   text-align: center;
   line-height: .85;
-  font-size: 8.75em;
+  font-size: 8.25em;
   justify-content: center;
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
   cursor: pointer;
