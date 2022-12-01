@@ -7,11 +7,6 @@ import ReactHowler from 'react-howler'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { TextPlugin } from "gsap/dist/TextPlugin";
 import $ from "jquery"
-import localFont from '@next/font/local'
-
-// Font files can be colocated inside of `pages`
-const monument = localFont({ src: './MonumentExtended.otf' })
-const nuixyber = localFont({ src: './Nuixyber.ttf' })
 
 export default function Fe() {
   
@@ -187,7 +182,6 @@ export default function Fe() {
       <title>FrontEnd | Haris Putratama</title>
       <meta name="description" content="Haris's UIUX Personal Portfolios" />
       <link rel="icon" href="/favicon.ico" />
-      
     </Head>
     <ReactHowler
         src='audio/strangerthings.mp3'
@@ -259,9 +253,7 @@ export default function Fe() {
                 <div class="container fe-content">
                   <div>
                     <div class="fe-text-hero text-full" id="fe-text-hero">
-                      <div className={nuixyber.className}>
                         <span class="flicker-slow">INTROD</span>UC<span class="flicker-slow">TION</span>
-                      </div>
                     </div>
                   </div>
                   <div class="neon-lightbar flicker-slow"></div>
@@ -288,9 +280,7 @@ export default function Fe() {
                       <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div>
                         <div class="fe-heading">
-                        <div className={nuixyber.className}>
                           TECH <span class="flicker-slow">STACK</span>
-                        </div>
                         </div>
                       </div>
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
@@ -329,9 +319,7 @@ export default function Fe() {
                     <div class="col-lg-6 align-self-center">
                         <div class="color-red mb-n1">&lt;h3&gt;</div>
                         <div class="fe-heading">
-                        <div className={nuixyber.className}>
                           <span class="flicker-slow">DREAMGURU</span>
-                        </div>
                         </div>
                         <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
                         <div class="color-red">&lt;p&gt;</div>
@@ -355,9 +343,7 @@ export default function Fe() {
                     <div class="col-lg-6 align-self-center">
                       <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div class="fe-heading">
-                      <div className={nuixyber.className}>
                         <span class="flicker-slow">DREAMGURU</span>
-                      </div>
                       </div>
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
                       <div class="color-red">&lt;p&gt;</div>
@@ -377,9 +363,7 @@ export default function Fe() {
                     <div class="col-lg-6 align-self-center">
                     <div class="color-red mb-n1">&lt;h3&gt;</div>
                       <div class="fe-heading">
-                      <div className={nuixyber.className}>
                         <span class="flicker-slow">DREAMAXTION</span>
-                      </div>
                       </div>
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h3&gt;</div>
                       <div class="color-red">&lt;p&gt;</div>
@@ -399,9 +383,7 @@ export default function Fe() {
                   <div class="col-lg-6 align-self-center">
                     <div class="color-red mb-n1">&lt;h4&gt;</div>
                     <div class="fe-heading2">
-                    <div className={nuixyber.className}>
                       <span class="flicker-slow">ADELLE ACADEMY</span>
-                    </div>
                     </div>
                     <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
                     <div class="color-red">&lt;p&gt;</div>
@@ -415,9 +397,7 @@ export default function Fe() {
                     <div class="col-lg-6 align-self-center">
                       <div class="color-red mb-n1">&lt;h4&gt;</div>
                       <div class="fe-heading2">
-                        <div className={nuixyber.className}>
-                          <span class="flicker-slow">ADELLE ACADEMY</span>
-                        </div>
+                        <span class="flicker-slow">ADELLE ACADEMY</span>
                       </div>
                       <div class="color-red text-end mt-n1 mb-1">&lt;/h4&gt;</div>
                       <div class="color-red">&lt;p&gt;</div>
@@ -465,7 +445,7 @@ export default function Fe() {
                       
                     </div>
                     <div class="fe-get-in-touch">
-                      <a id="fe-get-in-touch-btn" className={monument.className} href="https://wa.me/6282126913015" >GET IN TOUCH</a>
+                      <a id="fe-get-in-touch-btn" href="https://wa.me/6282126913015" >GET IN TOUCH</a>
                     </div>
                   </div>
                   
